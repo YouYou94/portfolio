@@ -1,5 +1,12 @@
+import { Cover, Menu, SingleTemplate } from '../components';
+
 const HomeContainer = () => {
-  return <>홈</>;
+  return (
+    <SingleTemplate>
+      <Cover />
+      <Menu />
+    </SingleTemplate>
+  );
 };
 
 export default HomeContainer;
