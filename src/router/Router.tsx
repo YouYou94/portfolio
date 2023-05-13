@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HomeContainer, AboutContainer, ProjectContainer } from '../containers';
+import { About, Home } from '../pages';
+import Project from '../pages/Project';
 
 export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/portfolio" element={<HomeContainer />} />
-        <Route path="/portfolio/about" element={<AboutContainer />} />
-        <Route path="/portfolio/project" element={<ProjectContainer />} />
+        <Route path="/portfolio" element={<Home />} />
+        <Route path="/portfolio/about" element={<About />} />
+        <Route path="/portfolio/project" element={<Project />} />
       </Routes>
     </BrowserRouter>
   );
