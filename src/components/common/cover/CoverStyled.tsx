@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 
-export const Box = styled.div`
+export const Section = styled.section`
   flex: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: rgb(30, 30, 90);
+
+  gap: 2rem;
+`;
+
+export const Header = styled.header`
+  height: 12rem;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 5rem;
 
   background-color: rgb(30, 30, 90);
 

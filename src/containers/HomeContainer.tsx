@@ -3,7 +3,7 @@ import { Cover, Menu, SingleTemplate } from '../components';
 const HomeContainer = () => {
   return (
     <SingleTemplate>
-      <Cover />
+      <Cover title="Portfolio" />
       <Menu />
     </SingleTemplate>
   );
