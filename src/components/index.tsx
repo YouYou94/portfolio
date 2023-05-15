@@ -7,3 +7,6 @@ export { Template } from './common/template/Template';
 export { Menu } from './common/menu/Menu';
 
 /* Home */
+
+/* About */
+export { About } from './about/About';
