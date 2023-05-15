@@ -1,48 +1,55 @@
-import { useNavigate, useLocation } from 'react-router-dom';
-import { Nav, List, Item, NavButton } from './MenuStyled';
-import HOME from '../../../assets/menu/home.png';
-import HOMECLICKED from '../../../assets/menu/home-clicked.png';
-import ABOUT from '../../../assets/menu/about.png';
-import ABOUTCLICKED from '../../../assets/menu/about-clicked.png';
-import PROJECT from '../../../assets/menu/project.png';
-import PROJECTCLICKED from '../../../assets/menu/project-clicked.png';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import {
+  Nav,
+  BurgerIcon,
+  BurgerSticks,
+  MenuBox,
+  List,
+  Item,
+} from './MenuStyled';
 
 export const Menu = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const [isToggled, setIsToggled] = useState<string>('false');
 
-  console.log(location.pathname);
+  const handleClickToggle = () => {
+    if (isToggled === 'true') setIsToggled('false');
+    else setIsToggled('true');
+  };
+
+  const handleClickHome = () => {
+    navigate('/portfolio');
+
+    setIsToggled('false');
+  };
+
+  const handleClickAbout = () => {
+    navigate('/portfolio/about');
+
+    setIsToggled('false');
+  };
+
+  const handleClickProject = () => {
+    navigate('/portfolio/project');
+
+    setIsToggled('false');
+  };
+
   return (
-    <Nav>
-      <List>
-        <Item>
-          <NavButton
-            onClick={() => navigate('/portfolio')}
-            icon={location.pathname === '/portfolio' ? HOMECLICKED : HOME}
-            title="홈"
-          />
-        </Item>
-        <Item>
-          <NavButton
-            onClick={() => navigate('/portfolio/about')}
-            icon={
-              location.pathname === '/portfolio/about' ? ABOUTCLICKED : ABOUT
-            }
-            title="소개"
-          />
-        </Item>
-        <Item>
-          <NavButton
-            onClick={() => navigate('/portfolio/project')}
-            icon={
-              location.pathname === '/portfolio/project'
-                ? PROJECTCLICKED
-                : PROJECT
-            }
-            title="프로젝트"
-          />
-        </Item>
-      </List>
-    </Nav>
+    <>
+      <Nav>
+        <BurgerIcon onClick={handleClickToggle}>
+          <BurgerSticks toggle={isToggled}></BurgerSticks>
+        </BurgerIcon>
+        <MenuBox toggle={isToggled}>
+          <List>
+            <Item onClick={handleClickHome}>HOME</Item>
+            <Item onClick={handleClickAbout}>ABOUT</Item>
+            <Item onClick={handleClickProject}>PROJECT</Item>
+          </List>
+        </MenuBox>
+      </Nav>
+    </>
   );
 };
