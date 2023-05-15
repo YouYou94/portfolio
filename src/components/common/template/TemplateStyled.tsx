@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SingleLayout = styled.section`
+export const Layout = styled.section<{ color: string | undefined }>`
   width: 100%;
   height: 100vh;
 
@@ -8,4 +8,6 @@ export const SingleLayout = styled.section`
 
   display: flex;
   flex-direction: column;
+
+  background-color: ${(prop) => prop.color};
 `;
