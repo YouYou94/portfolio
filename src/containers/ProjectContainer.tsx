@@ -1,5 +1,8 @@
+import { ProjectList } from '../Constants';
+import { Template } from '../components';
+
 const ProjectContainer = () => {
-  return <>프로젝트</>;
+  return <Template>프로젝트</Template>;
 };
 
 export default ProjectContainer;

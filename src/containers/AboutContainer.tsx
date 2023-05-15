@@ -1,5 +1,7 @@
+import { Template } from '../components';
+
 const AboutContainer = () => {
-  return <>소개</>;
+  return <Template>어바웃</Template>;
 };
 
 export default AboutContainer;
