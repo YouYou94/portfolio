@@ -9,5 +9,7 @@ export const Layout = styled.section<{ color: string | undefined }>`
   display: flex;
   flex-direction: column;
 
+  padding-top: 3rem;
+
   background-color: ${(prop) => prop.color};
 `;
