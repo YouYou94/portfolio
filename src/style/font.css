@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./font/Anton-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GowunDodum';
+  src: url('./font/GowunDodum-Regular.ttf') format('truetype');
+}

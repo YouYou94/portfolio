@@ -1,6 +1,6 @@
-import React from 'react';
 import './App.css';
 import './Reset.css';
+import './style/font.css';
 import { Router } from './router/Router';
 
 function App() {
