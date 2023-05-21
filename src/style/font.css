@@ -7,3 +7,18 @@
   font-family: 'GowunDodum';
   src: url('./font/GowunDodum-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('./font/Caveat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alkatra';
+  src: url('./font/Alkatra-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GreatVibes';
+  src: url('./font/GreatVibes-Regular.ttf') format('truetype');
+}
