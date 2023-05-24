@@ -16,8 +16,6 @@ export const About = styled.section`
 export const Br = styled.br``;
 
 export const Box = styled.div`
-  flex: 1;
-
   display: flex;
   flex-direction: column;
 `;

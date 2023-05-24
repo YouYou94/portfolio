@@ -105,7 +105,6 @@ export const AboutUI = () => {
         <CloseTag tag="img" paddingLeft="9" />
         <CloseTag tag="section" paddingLeft="6" />
       </Box>
-      <CloseTag tag="body" paddingLeft="3" />
     </About>
   );
 };
