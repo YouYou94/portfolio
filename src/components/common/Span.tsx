@@ -2,12 +2,18 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 
 const Span = styled.span<{ paddingLeft?: string }>`
-  padding-left: ${(prop) => prop.paddingLeft};
+  padding-left: ${(prop) => prop.paddingLeft}rem;
 
   font-family: 'Caveat';
   font-size: 1.2rem;
 
   color: #919191;
+
+  transition: all 0.5s;
+
+  @media screen and (max-width: 768px) {
+    padding-left: ${(prop) => Number(prop.paddingLeft) / 2}rem;
+  }
 `;
 
 const Tag = styled(Span)`
