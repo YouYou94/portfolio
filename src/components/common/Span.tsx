@@ -58,12 +58,11 @@ export const OpenTag = ({ tag, children, symbol, paddingLeft }: TagProps) => {
   );
 };
 
-export const CloseTag = ({ tag, children, paddingLeft }: TagProps) => {
+export const CloseTag = ({ tag, paddingLeft }: TagProps) => {
   return (
     <Span paddingLeft={paddingLeft}>
       {'</'}
       <Tag>{tag}</Tag>
-      {children}
       {'>'}
     </Span>
   );
