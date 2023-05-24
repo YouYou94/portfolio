@@ -4,7 +4,7 @@ export const Header = styled.header`
   position: fixed;
 
   width: 100%;
-  height: 5rem;
+  height: 4rem;
 
   display: flex;
   justify-content: space-between;
@@ -13,6 +13,8 @@ export const Header = styled.header`
 
   background-color: #222831;
   color: #eeeeee;
+
+  z-index: 1;
 
   // 반응형 웹
   @media screen and (max-width: 768px) {

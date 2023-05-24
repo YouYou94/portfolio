@@ -7,12 +7,12 @@ export const Cover = styled.section`
   display: flex;
   flex-direction: column;
 
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
 
   background-color: #222831;
 
   @media screen and (max-width: 768px) {
-    padding: 5rem 1rem 1rem 1rem;
+    padding: 4rem 1rem 1rem 1rem;
   }
 `;
 
