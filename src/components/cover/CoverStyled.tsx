@@ -1,109 +1,92 @@
 import styled, { keyframes } from 'styled-components';
-import Scroll from '../../assets/scroll.png';
 
-export const Section = styled.section`
+export const Cover = styled.section`
   width: 100%;
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
 
-  padding: 5rem 1rem 1rem 1rem;
+  padding: 5rem 1rem;
 
   background-color: #222831;
+
+  @media screen and (max-width: 768px) {
+    padding: 5rem 1rem 1rem 1rem;
+  }
 `;
 
-export const CoverBox = styled.div`
+export const Br = styled.br``;
+
+export const TitleBox = styled.div`
   flex: 1;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 `;
 
-export const Box = styled.div`
-  display: flex;
-
-  @media screen and (min-width: 769px) {
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-
-    padding-left: 3rem;
-  }
-`;
-
-export const Title = styled.span`
-  margin-left: 0.3rem;
-
-  font-family: 'GowunDodum';
-  font-size: 5rem;
-
+export const Span = styled.span`
   color: #eeeeee;
 
-  text-align: center;
+  user-select: none;
 
   &:hover {
     color: #ffd369;
   }
 `;
 
-export const HeaderBox = styled(Box)`
-  @media screen and (max-width: 768px) {
-    padding-left: 7rem;
-  }
+export const Title = styled(Span)`
+  font-family: 'Anton';
+  font-size: 5rem;
 `;
 
-export const HeaderTitle = styled(Title)`
-  font-size: 1rem;
+export const SubTitle = styled(Span)`
+  font-family: 'Alkatra';
+  font-size: 1.1rem;
 `;
 
-export const NavBox = styled(Box)`
+export const ScrollBox = styled.div`
+  flex: 1;
+
+  display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 
-  @media screen and (max-width: 768px) {
-    padding-left: 9rem;
-  }
+  gap: 1rem;
 `;
 
-export const ScrollBox = styled(Box)`
-  @media screen and (max-width: 768px) {
-    flex: 1;
+export const Mouse = styled.div`
+  width: 2.3rem;
+  height: 3.3rem;
 
-    flex-direction: column;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+
+  border: 3px solid #eeeeee;
+  border-radius: 25px;
+  padding-top: 0.5rem;
 `;
 
-const move = keyframes`
+const ScrollMove = keyframes`
   0% {
+    opacity: 0;
+  }
+  10% {
     transform: translateY(0);
-  }
-  25% {
-    transform: translateY(.5rem);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(.5rem);
+    opacity: 1;
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(.5rem);
+    opacity: 0;
   }
 `;
 
-export const ScrollIcon = styled.div`
-  width: 2rem;
-  height: 2rem;
+export const Scroller = styled.div`
+  height: 0.6rem;
 
-  margin-left: 0.2rem;
+  border: 2px solid #eeeeee;
 
-  background-image: url(${Scroll});
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  animation: ${move} 3s ease-out infinite;
+  animation: ${ScrollMove} 2s ease-out infinite;
 `;
