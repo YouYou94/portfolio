@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import Scroll from '../../assets/scroll.png';
 
 export const Section = styled.section`
   width: 100%;
   height: 100vh;
 
   display: flex;
-  justify-content: center;
 
   padding: 5rem 1rem 1rem 1rem;
 
@@ -13,43 +13,97 @@ export const Section = styled.section`
 `;
 
 export const CoverBox = styled.div`
-  width: 30rem;
+  flex: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-export const TitleBox = styled.div`
+export const Box = styled.div`
   display: flex;
-  justify-content: center;
+
+  @media screen and (min-width: 769px) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    padding-left: 3rem;
+  }
 `;
 
 export const Title = styled.span`
+  margin-left: 0.3rem;
+
   font-family: 'GowunDodum';
   font-size: 5rem;
 
   color: #eeeeee;
 
+  text-align: center;
+
   &:hover {
     color: #ffd369;
   }
 `;
 
-export const HeaderBox = styled.div`
-  display: flex;
+export const HeaderBox = styled(Box)`
+  @media screen and (max-width: 768px) {
+    padding-left: 7rem;
+  }
 `;
 
-export const HeaderTitle = styled.span`
-  margin: 0 0.3rem;
+export const HeaderTitle = styled(Title)`
+  font-size: 1rem;
+`;
 
-  font-family: 'GowunDodum';
+export const NavBox = styled(Box)`
+  flex-direction: column;
 
-  color: #eeeeee;
-
-  text-align: end;
-
-  &:hover {
-    color: #ffd369;
+  @media screen and (max-width: 768px) {
+    padding-left: 9rem;
   }
+`;
+
+export const ScrollBox = styled(Box)`
+  @media screen and (max-width: 768px) {
+    flex: 1;
+
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const move = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(.5rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const ScrollIcon = styled.div`
+  width: 2rem;
+  height: 2rem;
+
+  margin-left: 0.2rem;
+
+  background-image: url(${Scroll});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  animation: ${move} 3s ease-out infinite;
 `;
