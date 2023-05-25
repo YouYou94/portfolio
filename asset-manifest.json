@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.6cf9d4c5.css",
-    "main.js": "/portfolio/static/js/main.684a33d0.js",
+    "main.css": "/portfolio/static/css/main.5cceb0aa.css",
+    "main.js": "/portfolio/static/js/main.e5e08801.js",
     "static/media/GowunDodum-Regular.ttf": "/portfolio/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/Alkatra-Regular.ttf": "/portfolio/static/media/Alkatra-Regular.23ab70245e38b361521f.ttf",
     "static/media/Caveat-Regular.ttf": "/portfolio/static/media/Caveat-Regular.a1e626469343821ea869.ttf",
     "static/media/Anton-Regular.ttf": "/portfolio/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
     "static/media/GreatVibes-Regular.ttf": "/portfolio/static/media/GreatVibes-Regular.6d246c3b51d7eb58b13a.ttf",
     "index.html": "/portfolio/index.html",
-    "main.6cf9d4c5.css.map": "/portfolio/static/css/main.6cf9d4c5.css.map",
-    "main.684a33d0.js.map": "/portfolio/static/js/main.684a33d0.js.map"
+    "main.5cceb0aa.css.map": "/portfolio/static/css/main.5cceb0aa.css.map",
+    "main.e5e08801.js.map": "/portfolio/static/js/main.e5e08801.js.map"
   },
   "entrypoints": [
-    "static/css/main.6cf9d4c5.css",
-    "static/js/main.684a33d0.js"
+    "static/css/main.5cceb0aa.css",
+    "static/js/main.e5e08801.js"
   ]
 }
