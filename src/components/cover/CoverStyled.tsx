@@ -7,12 +7,12 @@ export const Cover = styled.section`
   display: flex;
   flex-direction: column;
 
-  padding: 4rem 1rem;
+  padding: 1rem 6rem;
 
   background-color: #222831;
 
   @media screen and (max-width: 768px) {
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 4rem 0 1rem 0;
   }
 `;
 
@@ -38,7 +38,11 @@ export const Span = styled.span`
 
 export const Title = styled(Span)`
   font-family: 'Anton';
-  font-size: 5rem;
+  font-size: 10rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 5rem;
+  }
 `;
 
 export const SubTitle = styled(Span)`

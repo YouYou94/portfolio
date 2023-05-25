@@ -8,27 +8,35 @@ export const About = styled.section`
   flex-direction: column;
 
   border-top: 1px solid #eeeeee;
-  padding: 1rem 1rem;
+  padding: 1rem 6rem;
 
   background-color: #222831;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 0 1rem 0;
+  }
 `;
 
 export const Br = styled.br``;
 
 export const Box = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
 `;
 
 export const IntroduceBox = styled(Box)`
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+
+  flex-direction: column;
 `;
 
 export const TechBox = styled(Box)`
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+
+  flex-direction: column;
 
   gap: 1rem;
 `;
@@ -39,10 +47,14 @@ export const Span = styled.span`
   color: #eeeeee;
 
   user-select: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const Title = styled(Span)`
-  font-size: 4rem;
+  font-size: 3rem;
 
   &:hover {
     color: #ffd369;
