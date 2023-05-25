@@ -1,13 +1,13 @@
-import { About, Contact, Cover, Experience } from '../components';
+import { About, Contact, Cover, Experience, Template } from '../components';
 
 const Portfolio = () => {
   return (
-    <>
+    <Template>
       <Cover />
       <About />
       <Experience />
       <Contact />
-    </>
+    </Template>
   );
 };
 

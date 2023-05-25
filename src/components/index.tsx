@@ -1,4 +1,6 @@
-export { Header } from './header/Header.Container';
+export { Template } from './common/Template';
+
+export { Nav } from './nav/Nav.Container';
 export { Cover } from './cover/Cover.Container';
 export { About } from './about/About.Container';
 export { Experience } from './experience/Experience.Container';
