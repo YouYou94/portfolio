@@ -7,8 +7,7 @@ export const Experience = styled.section`
   display: flex;
   flex-direction: column;
 
-  border-top: 1px solid #eeeeee;
-  padding: 1rem 6rem;
+  padding: 0 0 0 6rem;
 
   @media screen and (max-width: 768px) {
     padding: 1rem 0 1rem 0;
@@ -16,6 +15,20 @@ export const Experience = styled.section`
 `;
 
 export const Br = styled.br``;
+
+export const Span = styled.span`
+  font-family: 'GowunDodum';
+
+  user-select: none;
+`;
+
+export const Title = styled(Span)`
+  font-size: 3rem;
+
+  &:hover {
+    color: #ffd369;
+  }
+`;
 
 export const Box = styled.div`
   display: flex;
@@ -47,31 +60,106 @@ export const CarouselBox = styled.div`
   height: 28rem;
 `;
 
-export const SlideBox = styled.div<{ now: number }>`
+export const SlideBox = styled.div<{ now: number; length: number }>`
   position: absolute;
 
-  width: 80rem;
+  width: ${(prop) => prop.length * 20}rem;
   height: 28rem;
 
   display: flex;
 
   gap: 1rem;
 
-  transform: translate(-${(prop) => prop.now * 20}rem);
+  transform: translate(-${(prop) => prop.now * 20 + prop.now}rem);
   transition: all 0.5s;
 `;
 
+/* PROJECT */
 export const Project = styled.div`
   width: 20rem;
   height: 28rem;
+
+  display: flex;
+  flex-direction: column;
 
   border: 1px solid #eeeeee;
   border-radius: 2rem;
 
   cursor: pointer;
 
+  gap: 1rem;
+
+  transition: all 0.5s;
+
   &:hover {
-    border: 1px solid #ffd369;
+    transform: translateY(-0.5rem);
+  }
+`;
+
+export const Line = styled.div`
+  border: 1px solid #393e46;
+  margin: 0 1rem;
+`;
+
+export const ProjectUI = styled.div<{ iconUrl: string }>`
+  width: calc(20rem - 2px);
+  height: 13rem;
+
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+
+  background-image: url(${(prop) => prop.iconUrl});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+`;
+
+export const ProjectTitle = styled(Span)`
+  font-size: 1.3rem;
+
+  padding: 0 1rem;
+`;
+
+export const TechBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0 1rem;
+
+  gap: 0.5rem;
+`;
+
+export const TechBadge = styled.div<{ backgroundColor: string }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.5rem;
+
+  background-color: ${(prop) => prop.backgroundColor};
+  color: #222831;
+
+  font-family: 'Alkatra';
+  font-size: 0.75rem;
+`;
+
+export const LinkBox = styled.div`
+  display: flex;
+  justify-content: center;
+
+  padding: 0 1.5rem;
+
+  gap: 0.5rem;
+`;
+
+export const Link = styled.a`
+  font-family: 'GowunDodum';
+
+  color: #eeeeee;
+
+  &:hover {
+    color: #ffd369;
   }
 `;
 
@@ -81,21 +169,7 @@ export const ButtonBox = styled.div`
   gap: 0.5rem;
 `;
 
-export const Span = styled.span`
-  font-family: 'GowunDodum';
-
-  user-select: none;
-`;
-
-export const Title = styled(Span)`
-  font-size: 3rem;
-
-  &:hover {
-    color: #ffd369;
-  }
-`;
-
-export const Btn = styled.button<{ isCheck: string }>`
+export const Button = styled.button<{ isCheck: string }>`
   width: 2rem;
   height: 0.5rem;
 

@@ -15,4 +15,7 @@ const Layout = styled.main`
 
   display: flex;
   flex-direction: column;
+
+  background-color: #222831;
+  color: #eeeeee;
 `;

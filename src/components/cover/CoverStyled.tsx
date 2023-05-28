@@ -7,12 +7,10 @@ export const Cover = styled.section`
   display: flex;
   flex-direction: column;
 
-  padding: 1rem 6rem;
-
-  background-color: #222831;
+  padding: 1rem 0 0 6rem;
 
   @media screen and (max-width: 768px) {
-    padding: 4rem 0 1rem 0;
+    padding: 4rem 0.5rem 0 0.5rem;
   }
 `;
 
@@ -27,8 +25,6 @@ export const TitleBox = styled.div`
 `;
 
 export const Span = styled.span`
-  color: #eeeeee;
-
   user-select: none;
 
   &:hover {
