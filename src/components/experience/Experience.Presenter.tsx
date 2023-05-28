@@ -8,9 +8,16 @@ import {
   CarouselBox,
   SlideBox,
   Project,
-  ButtonBox,
+  Line,
   Title,
-  Btn,
+  ProjectUI,
+  ProjectTitle,
+  TechBox,
+  TechBadge,
+  LinkBox,
+  Link,
+  ButtonBox,
+  Button,
 } from './ExperienceStyled';
 import React from 'react';
 
@@ -25,48 +32,72 @@ export const ExperienceUI = ({
 }: ExperienceProps) => {
   return (
     <Experience id="3">
-      <OpenTag tag="section" paddingLeft="6">
+      <OpenTag tag="section" paddingLeft="2">
         <VariableTag variable="className" value='"Project_Container"' />
       </OpenTag>
-      <OpenTag tag="h1" paddingLeft="9" />
+      <OpenTag tag="h1" paddingLeft="4" />
       <TitleBox>
         <Fade duration={3000}>
           <Title>프로젝트 경험</Title>
         </Fade>
       </TitleBox>
-      <CloseTag tag="h1" paddingLeft="9" />
-      <OpenTag tag="div" paddingLeft="9">
+      <CloseTag tag="h1" paddingLeft="4" />
+      <OpenTag tag="div" paddingLeft="4">
         <VariableTag variable="className" value='"Project_Slide"' />
       </OpenTag>
       <ProjectBox>
         <CarouselBox>
-          <SlideBox now={carouselState}>
-            {ProjectList?.map((project: Object, index: number) => {
-              return <Project key={index}></Project>;
+          <SlideBox now={carouselState} length={ProjectList.length}>
+            {ProjectList?.map((project: any, index: number) => {
+              const { id, ui, title, link, techstack } = project;
+
+              return (
+                <Project key={index} id={id}>
+                  <ProjectUI iconUrl={ui} />
+                  <ProjectTitle>{title}</ProjectTitle>
+                  <Line />
+                  <TechBox>
+                    {techstack?.map((tech: any, index: number) => {
+                      const { name, background } = tech;
+
+                      return (
+                        <TechBadge key={index} backgroundColor={background}>
+                          {name}
+                        </TechBadge>
+                      );
+                    })}
+                  </TechBox>
+                  <Line />
+                  <LinkBox>
+                    <Link href={link.github}>깃허브</Link>|
+                    <Link href={link.demo}>데모</Link>
+                  </LinkBox>
+                </Project>
+              );
             })}
           </SlideBox>
         </CarouselBox>
         <ButtonBox>
-          <Btn
+          <Button
             isCheck={(carouselState === 0).toString()}
             onClick={() => setCarouselState(0)}
-          ></Btn>
-          <Btn
+          ></Button>
+          <Button
             isCheck={(carouselState === 1).toString()}
             onClick={() => setCarouselState(1)}
-          ></Btn>
-          <Btn
+          ></Button>
+          <Button
             isCheck={(carouselState === 2).toString()}
             onClick={() => setCarouselState(2)}
-          ></Btn>
-          <Btn
+          ></Button>
+          <Button
             isCheck={(carouselState === 3).toString()}
             onClick={() => setCarouselState(3)}
-          ></Btn>
+          ></Button>
         </ButtonBox>
       </ProjectBox>
-      <CloseTag tag="div" paddingLeft="9" />
-      <CloseTag tag="section" paddingLeft="6" />
+      <CloseTag tag="div" paddingLeft="4" />
+      <CloseTag tag="section" paddingLeft="2" />
     </Experience>
   );
 };
