@@ -101,14 +101,14 @@ export const Line = styled.div`
   margin: 0 1rem;
 `;
 
-export const ProjectUI = styled.div<{ iconUrl: string }>`
+export const ProjectUI = styled.div<{ iconurl: string }>`
   width: calc(20rem - 2px);
   height: 13rem;
 
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 
-  background-image: url(${(prop) => prop.iconUrl});
+  background-image: url(${(prop) => prop.iconurl});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -129,7 +129,7 @@ export const TechBox = styled.div`
   gap: 0.5rem;
 `;
 
-export const TechBadge = styled.div<{ backgroundColor: string }>`
+export const TechBadge = styled.div<{ backgroundcolor: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +137,7 @@ export const TechBadge = styled.div<{ backgroundColor: string }>`
   border-radius: 0.25rem;
   padding: 0.1rem 0.5rem;
 
-  background-color: ${(prop) => prop.backgroundColor};
+  background-color: ${(prop) => prop.backgroundcolor};
   color: #222831;
 
   font-family: 'Alkatra';
@@ -170,12 +170,12 @@ export const ButtonBox = styled.div`
   gap: 0.5rem;
 `;
 
-export const Button = styled.button<{ isCheck: string }>`
+export const Button = styled.button<{ ischeck: string }>`
   width: 2rem;
   height: 0.5rem;
 
   background-color: ${(prop) =>
-    prop.isCheck === 'true' ? '#eeeeee' : '#393e46'};
+    prop.ischeck === 'true' ? '#eeeeee' : '#393e46'};
 
   border: none;
 

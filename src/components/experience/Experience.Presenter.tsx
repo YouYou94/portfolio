@@ -55,7 +55,7 @@ export const ExperienceUI = ({
 
               return (
                 <Project key={index}>
-                  <ProjectUI iconUrl={ui} />
+                  <ProjectUI iconurl={ui} />
                   <ProjectTitle>{title}</ProjectTitle>
                   <Line />
                   <TechBox>
@@ -63,7 +63,7 @@ export const ExperienceUI = ({
                       const { name, background } = tech;
 
                       return (
-                        <TechBadge key={index} backgroundColor={background}>
+                        <TechBadge key={index} backgroundcolor={background}>
                           {name}
                         </TechBadge>
                       );
@@ -90,19 +90,19 @@ export const ExperienceUI = ({
         </CarouselBox>
         <ButtonBox>
           <Button
-            isCheck={(carouselState === 0).toString()}
+            ischeck={(carouselState === 0).toString()}
             onClick={() => setCarouselState(0)}
           ></Button>
           <Button
-            isCheck={(carouselState === 1).toString()}
+            ischeck={(carouselState === 1).toString()}
             onClick={() => setCarouselState(1)}
           ></Button>
           <Button
-            isCheck={(carouselState === 2).toString()}
+            ischeck={(carouselState === 2).toString()}
             onClick={() => setCarouselState(2)}
           ></Button>
           <Button
-            isCheck={(carouselState === 3).toString()}
+            ischeck={(carouselState === 3).toString()}
             onClick={() => setCarouselState(3)}
           ></Button>
         </ButtonBox>

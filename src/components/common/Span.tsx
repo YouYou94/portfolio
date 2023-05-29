@@ -2,8 +2,8 @@ import { ReactElement } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
-const Span = styled.span<{ paddingLeft?: string }>`
-  padding-left: ${(prop) => prop.paddingLeft}rem;
+const Span = styled.span<{ paddingleft?: string }>`
+  padding-left: ${(prop) => prop.paddingleft}rem;
 
   font-family: 'Caveat';
   font-size: 1.2rem;
@@ -13,7 +13,7 @@ const Span = styled.span<{ paddingLeft?: string }>`
   transition: all 0.5s;
 
   @media screen and (max-width: 1024px) {
-    padding-left: ${(prop) => Number(prop.paddingLeft) / 2}rem;
+    padding-left: ${(prop) => Number(prop.paddingleft) / 2}rem;
   }
 `;
 
@@ -46,7 +46,7 @@ type VariableProps = {
 export const OneLineTag = ({ tag, children, paddingLeft }: TagProps) => {
   return (
     <Fade>
-      <Span paddingLeft={paddingLeft}>
+      <Span paddingleft={paddingLeft}>
         {'<'}
         <Tag>{tag}</Tag>
         {children}
@@ -59,7 +59,7 @@ export const OneLineTag = ({ tag, children, paddingLeft }: TagProps) => {
 export const OpenTag = ({ tag, children, symbol, paddingLeft }: TagProps) => {
   return (
     <Fade>
-      <Span paddingLeft={paddingLeft}>
+      <Span paddingleft={paddingLeft}>
         {symbol ? `<${symbol}` : '<'}
         <Tag>{tag}</Tag>
         {children}
@@ -73,7 +73,7 @@ export const CloseTag = ({ tag, paddingLeft }: TagProps) => {
   return (
     <Fade>
       {' '}
-      <Span paddingLeft={paddingLeft}>
+      <Span paddingleft={paddingLeft}>
         {'</'}
         <Tag>{tag}</Tag>
         {'>'}
