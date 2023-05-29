@@ -12,8 +12,8 @@ const Span = styled.span<{ paddingLeft?: string }>`
 
   transition: all 0.5s;
 
-  @media screen and (max-width: 768px) {
-    padding-left: ${(prop) => Number(prop.paddingLeft) / 3}rem;
+  @media screen and (max-width: 1024px) {
+    padding-left: ${(prop) => Number(prop.paddingLeft) / 2}rem;
   }
 `;
 
