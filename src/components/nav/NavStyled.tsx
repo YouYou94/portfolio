@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import ModeIconUrl from '../../assets/mode.png';
 
 export const Nav = styled.header`
   position: fixed;
@@ -68,7 +69,7 @@ export const Menu = styled(Box)<{ isToggle: string }>`
   }
 `;
 
-export const DarkMode = styled(Box)``;
+export const Mode = styled(Box)``;
 
 export const Logo = styled.img``;
 
@@ -160,5 +161,53 @@ export const List = styled.li`
     background-color: rgb(57, 62, 70, 0.5);
 
     animation: ${Move} 2s ease-out infinite;
+  }
+`;
+
+/* Mode */
+export const DarkModeBox = styled.div<{ mode: string }>`
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: ${(prop) =>
+    prop.mode === 'true' ? 'rgb(204, 204, 204)' : 'rgb(235, 235, 235)'};
+
+  cursor: pointer;
+
+  :hover {
+    background-color: ${(prop) =>
+      prop.mode === 'true' ? 'rgb(251, 251, 251)' : 'rgb(204, 204, 204)'};
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+`;
+
+export const DarkMode = styled(DarkModeBox)`
+  transition: all 0.3s;
+
+  ${(prop) =>
+    prop.mode === 'true' ? 'transform: scaleX(-1) scaleY(-1);' : ''};
+`;
+
+export const DarkModeIcon = styled.div`
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background-image: url(${ModeIconUrl});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 1024px) {
+    width: 1rem;
+    height: 1rem;
   }
 `;

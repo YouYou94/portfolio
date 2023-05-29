@@ -4,7 +4,10 @@ import {
   LogoBox,
   Menu,
   Hamberger,
+  Mode,
+  DarkModeBox,
   DarkMode,
+  DarkModeIcon,
   MenuBox,
   ListBox,
   List,
@@ -25,7 +28,11 @@ export const NavUI = ({ toggleState, menuHandler, listHandler }: NavProps) => {
         <Hamberger></Hamberger>
         <Hamberger></Hamberger>
       </Menu>
-      <DarkMode>다크모드</DarkMode>
+      <Mode>
+        <DarkMode mode="false">
+          <DarkModeIcon />
+        </DarkMode>
+      </Mode>
       <MenuBox isToggle={toggleState.toString()}>
         <ListBox>
           <Link to="1" spy={true} smooth={true}>
