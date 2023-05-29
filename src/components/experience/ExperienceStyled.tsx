@@ -163,6 +163,7 @@ export const Link = styled.a`
   }
 `;
 
+/* 캐러셀 버튼 */
 export const ButtonBox = styled.div`
   display: flex;
 

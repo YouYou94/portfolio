@@ -24,11 +24,13 @@ import React from 'react';
 type ExperienceProps = {
   carouselState: number;
   setCarouselState: React.Dispatch<React.SetStateAction<number>>;
+  clickHandler: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 export const ExperienceUI = ({
   carouselState,
   setCarouselState,
+  clickHandler,
 }: ExperienceProps) => {
   return (
     <Experience id="3">
@@ -52,7 +54,7 @@ export const ExperienceUI = ({
               const { id, ui, title, link, techstack } = project;
 
               return (
-                <Project key={index} id={id}>
+                <Project key={index}>
                   <ProjectUI iconUrl={ui} />
                   <ProjectTitle>{title}</ProjectTitle>
                   <Line />
@@ -69,8 +71,17 @@ export const ExperienceUI = ({
                   </TechBox>
                   <Line />
                   <LinkBox>
-                    <Link href={link.github}>깃허브</Link>|
-                    <Link href={link.demo}>데모</Link>
+                    <Link href={link.github} target="_blank">
+                      깃허브
+                    </Link>
+                    |
+                    <Link href={link.demo} target="_blank">
+                      데모
+                    </Link>
+                    |
+                    <Link id={id} onClick={clickHandler} target="_blank">
+                      README
+                    </Link>
                   </LinkBox>
                 </Project>
               );
