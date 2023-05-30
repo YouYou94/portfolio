@@ -22,12 +22,14 @@ import {
 import React from 'react';
 
 type ExperienceProps = {
+  modeState: boolean;
   carouselState: number;
   setCarouselState: React.Dispatch<React.SetStateAction<number>>;
   clickHandler: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
 export const ExperienceUI = ({
+  modeState,
   carouselState,
   setCarouselState,
   clickHandler,
@@ -54,8 +56,8 @@ export const ExperienceUI = ({
               const { id, ui, title, link, techstack } = project;
 
               return (
-                <Project key={index}>
-                  <ProjectUI iconurl={ui} />
+                <Project key={index} mode={modeState.toString()}>
+                  <ProjectUI iconurl={ui} mode={modeState.toString()} />
                   <ProjectTitle>{title}</ProjectTitle>
                   <Line />
                   <TechBox>
@@ -71,15 +73,27 @@ export const ExperienceUI = ({
                   </TechBox>
                   <Line />
                   <LinkBox>
-                    <Link href={link.github} target="_blank">
+                    <Link
+                      mode={modeState.toString()}
+                      href={link.github}
+                      target="_blank"
+                    >
                       깃허브
                     </Link>
                     |
-                    <Link href={link.demo} target="_blank">
+                    <Link
+                      mode={modeState.toString()}
+                      href={link.demo}
+                      target="_blank"
+                    >
                       데모
                     </Link>
                     |
-                    <Link id={id} onClick={clickHandler} target="_blank">
+                    <Link
+                      id={id}
+                      mode={modeState.toString()}
+                      onClick={clickHandler}
+                    >
                       README
                     </Link>
                   </LinkBox>
@@ -89,22 +103,16 @@ export const ExperienceUI = ({
           </SlideBox>
         </CarouselBox>
         <ButtonBox>
-          <Button
-            ischeck={(carouselState === 0).toString()}
-            onClick={() => setCarouselState(0)}
-          ></Button>
-          <Button
-            ischeck={(carouselState === 1).toString()}
-            onClick={() => setCarouselState(1)}
-          ></Button>
-          <Button
-            ischeck={(carouselState === 2).toString()}
-            onClick={() => setCarouselState(2)}
-          ></Button>
-          <Button
-            ischeck={(carouselState === 3).toString()}
-            onClick={() => setCarouselState(3)}
-          ></Button>
+          {ProjectList?.map((project: any, index: number) => {
+            return (
+              <Button
+                key={index}
+                mode={modeState.toString()}
+                ischeck={(carouselState === index).toString()}
+                onClick={() => setCarouselState(index)}
+              ></Button>
+            );
+          })}
         </ButtonBox>
       </ProjectBox>
       <CloseTag tag="div" paddingLeft="4" />

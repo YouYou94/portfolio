@@ -57,16 +57,20 @@ export const ScrollBox = styled.div`
   gap: 1rem;
 `;
 
-export const Mouse = styled.div`
+export const Mouse = styled.div<{ mode: string }>`
   width: 2.3rem;
   height: 3.3rem;
 
   display: flex;
   justify-content: center;
 
-  border: 3px solid #eeeeee;
+  border: 3px solid ${(prop) => (prop.mode === 'true' ? '#393e46' : '#eeeeee')};
   border-radius: 25px;
   padding-top: 0.5rem;
+
+  &:hover {
+    border: 3px solid #ffd369;
+  }
 `;
 
 const ScrollMove = keyframes`
@@ -83,10 +87,14 @@ const ScrollMove = keyframes`
   }
 `;
 
-export const Scroller = styled.div`
+export const Scroller = styled.div<{ mode: string }>`
   height: 0.6rem;
 
-  border: 2px solid #eeeeee;
+  border: 2px solid ${(prop) => (prop.mode === 'true' ? '#222831' : '#eeeeee')};
 
   animation: ${ScrollMove} 2s ease-out infinite;
+
+  ${Mouse}:hover & {
+    border: 2px solid #ffd369;
+  }
 `;

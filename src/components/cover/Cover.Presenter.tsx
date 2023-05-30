@@ -11,7 +11,11 @@ import {
   Scroller,
 } from './CoverStyled';
 
-export const CoverUI = () => {
+type CoverProps = {
+  modeState: boolean;
+};
+
+export const CoverUI = ({ modeState }: CoverProps) => {
   return (
     <Cover id="1">
       <OpenTag tag="DOCTYPE" symbol="!">
@@ -42,8 +46,8 @@ export const CoverUI = () => {
         <SubTitle>YouYou94 | Frontend Developer</SubTitle>
         <ScrollBox>
           <Span>SCROLL DOWN</Span>
-          <Mouse>
-            <Scroller />
+          <Mouse mode={modeState.toString()}>
+            <Scroller mode={modeState.toString()} />
           </Mouse>
         </ScrollBox>
       </TitleBox>

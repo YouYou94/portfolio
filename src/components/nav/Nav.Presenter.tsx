@@ -5,7 +5,6 @@ import {
   Menu,
   Hamberger,
   Mode,
-  DarkModeBox,
   DarkMode,
   DarkModeIcon,
   MenuBox,
@@ -15,25 +14,33 @@ import {
 
 type NavProps = {
   toggleState: boolean;
+  modeState: boolean;
   menuHandler: React.MouseEventHandler<HTMLDivElement>;
   listHandler: React.MouseEventHandler<HTMLLIElement>;
+  modeHandler: React.MouseEventHandler<HTMLDivElement>;
 };
 
-export const NavUI = ({ toggleState, menuHandler, listHandler }: NavProps) => {
+export const NavUI = ({
+  toggleState,
+  modeState,
+  menuHandler,
+  listHandler,
+  modeHandler,
+}: NavProps) => {
   return (
-    <Nav>
+    <Nav mode={modeState.toString()}>
       <LogoBox>로고</LogoBox>
-      <Menu isToggle={toggleState.toString()} onClick={menuHandler}>
-        <Hamberger></Hamberger>
-        <Hamberger></Hamberger>
-        <Hamberger></Hamberger>
+      <Menu toggle={toggleState.toString()} onClick={menuHandler}>
+        <Hamberger mode={modeState.toString()}></Hamberger>
+        <Hamberger mode={modeState.toString()}></Hamberger>
+        <Hamberger mode={modeState.toString()}></Hamberger>
       </Menu>
       <Mode>
-        <DarkMode mode="false">
-          <DarkModeIcon />
+        <DarkMode mode={modeState.toString()} onClick={modeHandler}>
+          <DarkModeIcon onClick={modeHandler} />
         </DarkMode>
       </Mode>
-      <MenuBox isToggle={toggleState.toString()}>
+      <MenuBox toggle={toggleState.toString()} mode={modeState.toString()}>
         <ListBox>
           <Link to="1" spy={true} smooth={true}>
             <List onClick={listHandler}>HOME</List>

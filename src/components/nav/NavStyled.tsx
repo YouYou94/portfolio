@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import ModeIconUrl from '../../assets/mode.png';
 
-export const Nav = styled.header`
+export const Nav = styled.header<{ mode: string }>`
   position: fixed;
 
   width: 5rem;
@@ -13,8 +13,9 @@ export const Nav = styled.header`
 
   border-right: 1px solid #393e46;
 
-  background-color: #222831;
-  color: #eeeeee;
+  background-color: ${(prop) =>
+    prop.mode === 'true' ? 'rgb(255, 255, 255)' : '#222831'};
+  color: ${(prop) => (prop.mode === 'true' ? '#222831' : '#eeeeee')};
 
   z-index: 1;
 
@@ -50,37 +51,34 @@ export const Box = styled.div`
 
 export const LogoBox = styled(Box)``;
 
-export const Menu = styled(Box)<{ isToggle: string }>`
+export const Menu = styled(Box)<{ toggle: string }>`
   > span {
-    ${(prop) => (prop.isToggle === 'true' ? 'position: absolute' : '')};
+    ${(prop) => (prop.toggle === 'true' ? 'position: absolute' : '')};
 
     &:first-child {
-      ${(prop) => (prop.isToggle === 'true' ? 'transform: rotate(45deg)' : '')};
+      ${(prop) => (prop.toggle === 'true' ? 'transform: rotate(45deg)' : '')};
     }
 
     &:nth-last-child(1) {
-      ${(prop) =>
-        prop.isToggle === 'true' ? 'transform: rotate(-45deg)' : ''};
+      ${(prop) => (prop.toggle === 'true' ? 'transform: rotate(-45deg)' : '')};
     }
 
     &:nth-last-child(2) {
-      ${(prop) => (prop.isToggle === 'true' ? 'opacity: 0' : '')};
+      ${(prop) => (prop.toggle === 'true' ? 'opacity: 0' : '')};
     }
   }
 `;
 
-export const Mode = styled(Box)``;
-
 export const Logo = styled.img``;
 
-export const Hamberger = styled.span`
+export const Hamberger = styled.span<{ mode: string }>`
   width: 33px;
   height: 4px;
 
   margin-bottom: 5px;
   border-radius: 3px;
 
-  background-color: #eeeeee;
+  background-color: ${(prop) => (prop.mode === 'true' ? '#222831' : '#eeeeee')};
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -91,7 +89,7 @@ export const Hamberger = styled.span`
 `;
 
 /* Menu */
-export const MenuBox = styled.div<{ isToggle: string }>`
+export const MenuBox = styled.div<{ toggle: string; mode: string }>`
   position: absolute;
 
   width: 100vw;
@@ -102,18 +100,19 @@ export const MenuBox = styled.div<{ isToggle: string }>`
   justify-content: center;
   align-items: center;
 
-  background-color: #222831;
+  background-color: ${(prop) =>
+    prop.mode === 'true' ? 'rgb(255, 255, 255)' : '#222831'};
 
   transition: ease 0.3s;
 
   z-index: 1;
 
   @media screen and (min-width: 769px) {
-    ${(prop) => (prop.isToggle === 'true' ? ' left: 0' : 'left: -100vw')};
+    ${(prop) => (prop.toggle === 'true' ? ' left: 0' : 'left: -100vw')};
   }
 
   @media screen and (max-width: 768px) {
-    ${(prop) => (prop.isToggle === 'true' ? ' top: 0' : 'top: -100vh')};
+    ${(prop) => (prop.toggle === 'true' ? ' top: 0' : 'top: -100vh')};
   }
 `;
 
@@ -165,6 +164,8 @@ export const List = styled.li`
 `;
 
 /* Mode */
+export const Mode = styled(Box)``;
+
 export const DarkModeBox = styled.div<{ mode: string }>`
   width: 2.5rem;
   height: 2.5rem;
@@ -175,15 +176,9 @@ export const DarkModeBox = styled.div<{ mode: string }>`
 
   border-radius: 50%;
 
-  background-color: ${(prop) =>
-    prop.mode === 'true' ? 'rgb(204, 204, 204)' : 'rgb(235, 235, 235)'};
+  background-color: ${(prop) => (prop.mode === 'true' ? '' : '#eeeeee')};
 
   cursor: pointer;
-
-  :hover {
-    background-color: ${(prop) =>
-      prop.mode === 'true' ? 'rgb(251, 251, 251)' : 'rgb(204, 204, 204)'};
-  }
 
   @media screen and (max-width: 1024px) {
     width: 1.8rem;
@@ -194,8 +189,7 @@ export const DarkModeBox = styled.div<{ mode: string }>`
 export const DarkMode = styled(DarkModeBox)`
   transition: all 0.3s;
 
-  ${(prop) =>
-    prop.mode === 'true' ? 'transform: scaleX(-1) scaleY(-1);' : ''};
+  ${(prop) => (prop.mode === 'true' ? '' : 'transform: scaleX(-1) scaleY(-1)')};
 `;
 
 export const DarkModeIcon = styled.div`

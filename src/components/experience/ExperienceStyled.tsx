@@ -75,14 +75,14 @@ export const SlideBox = styled.div<{ now: number; length: number }>`
 `;
 
 /* PROJECT */
-export const Project = styled.div`
+export const Project = styled.div<{ mode: string }>`
   width: 20rem;
   height: 28rem;
 
   display: flex;
   flex-direction: column;
 
-  border: 1px solid #eeeeee;
+  border: 1px solid ${(prop) => (prop.mode === 'true' ? '#393e46' : '#eeeeee')};
   border-radius: 2rem;
 
   cursor: pointer;
@@ -101,12 +101,14 @@ export const Line = styled.div`
   margin: 0 1rem;
 `;
 
-export const ProjectUI = styled.div<{ iconurl: string }>`
+export const ProjectUI = styled.div<{ iconurl: string; mode: string }>`
   width: calc(20rem - 2px);
   height: 13rem;
 
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  border-bottom: 1px solid
+    ${(prop) => (prop.mode === 'true' ? '#393e46' : '#eeeeee')};
 
   background-image: url(${(prop) => prop.iconurl});
   background-repeat: no-repeat;
@@ -153,10 +155,10 @@ export const LinkBox = styled.div`
   gap: 0.5rem;
 `;
 
-export const Link = styled.a`
+export const Link = styled.a<{ mode: string }>`
   font-family: 'GowunDodum';
 
-  color: #eeeeee;
+  color: ${(prop) => (prop.mode === 'true' ? '#222831' : '#eeeeee')};
 
   &:hover {
     color: #ffd369;
@@ -170,14 +172,20 @@ export const ButtonBox = styled.div`
   gap: 0.5rem;
 `;
 
-export const Button = styled.button<{ ischeck: string }>`
+export const Button = styled.button<{ ischeck: string; mode: string }>`
   width: 2rem;
   height: 0.5rem;
 
   background-color: ${(prop) =>
-    prop.ischeck === 'true' ? '#eeeeee' : '#393e46'};
+    prop.ischeck === 'true'
+      ? prop.mode === 'true'
+        ? '#393e46'
+        : '#eeeeee'
+      : prop.mode === 'true'
+      ? 'rgb(255, 255, 255)'
+      : '#393e46'};
 
-  border: none;
+  border: ${(prop) => (prop.mode === 'true' ? '1px solid #393e46' : 'none')};
 
   &:hover {
     background-color: #ffd369;

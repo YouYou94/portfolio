@@ -1,5 +1,9 @@
+import { useRecoilValue } from 'recoil';
 import { CoverUI } from './Cover.Presenter';
+import { getModeState } from '../../recoil/selector';
 
 export const Cover = () => {
-  return <CoverUI />;
+  const mode = useRecoilValue(getModeState);
+
+  return <CoverUI modeState={mode} />;
 };
