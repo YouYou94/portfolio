@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5cceb0aa.css",
-    "main.js": "/portfolio/static/js/main.e5e08801.js",
+    "main.css": "/portfolio/static/css/main.40295841.css",
+    "main.js": "/portfolio/static/js/main.fe80c0a8.js",
     "static/media/GowunDodum-Regular.ttf": "/portfolio/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
+    "static/media/orderapp.png": "/portfolio/static/media/orderapp.ceba91961108fbdf6224.png",
     "static/media/Alkatra-Regular.ttf": "/portfolio/static/media/Alkatra-Regular.23ab70245e38b361521f.ttf",
+    "static/media/bujologapp.png": "/portfolio/static/media/bujologapp.994be590faff3035db27.png",
     "static/media/Caveat-Regular.ttf": "/portfolio/static/media/Caveat-Regular.a1e626469343821ea869.ttf",
     "static/media/Anton-Regular.ttf": "/portfolio/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
     "static/media/GreatVibes-Regular.ttf": "/portfolio/static/media/GreatVibes-Regular.6d246c3b51d7eb58b13a.ttf",
+    "static/media/portfolio.png": "/portfolio/static/media/portfolio.0ae07968abc22e70354f.png",
+    "static/media/memoapp.png": "/portfolio/static/media/memoapp.1b814f54dee6a0ba116d.png",
+    "static/media/mode.png": "/portfolio/static/media/mode.fcf603597fdeac3ea688.png",
     "index.html": "/portfolio/index.html",
-    "main.5cceb0aa.css.map": "/portfolio/static/css/main.5cceb0aa.css.map",
-    "main.e5e08801.js.map": "/portfolio/static/js/main.e5e08801.js.map"
+    "main.40295841.css.map": "/portfolio/static/css/main.40295841.css.map",
+    "main.fe80c0a8.js.map": "/portfolio/static/js/main.fe80c0a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cceb0aa.css",
-    "static/js/main.e5e08801.js"
+    "static/css/main.40295841.css",
+    "static/js/main.fe80c0a8.js"
   ]
 }
