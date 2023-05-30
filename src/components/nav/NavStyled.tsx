@@ -51,6 +51,15 @@ export const Box = styled.div`
 
 export const LogoBox = styled(Box)``;
 
+export const LogoSpan = styled.span`
+  font-family: 'LilitaOne';
+  font-size: 2.5rem;
+
+  &:hover {
+    color: #ffd369;
+  }
+`;
+
 export const Menu = styled(Box)<{ toggle: string }>`
   > span {
     ${(prop) => (prop.toggle === 'true' ? 'position: absolute' : '')};

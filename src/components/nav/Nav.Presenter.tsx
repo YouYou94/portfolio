@@ -2,6 +2,7 @@ import { Link } from 'react-scroll';
 import {
   Nav,
   LogoBox,
+  LogoSpan,
   Menu,
   Hamberger,
   Mode,
@@ -15,6 +16,7 @@ import {
 type NavProps = {
   toggleState: boolean;
   modeState: boolean;
+  logoHandler: React.MouseEventHandler<HTMLDivElement>;
   menuHandler: React.MouseEventHandler<HTMLDivElement>;
   listHandler: React.MouseEventHandler<HTMLLIElement>;
   modeHandler: React.MouseEventHandler<HTMLDivElement>;
@@ -23,13 +25,16 @@ type NavProps = {
 export const NavUI = ({
   toggleState,
   modeState,
+  logoHandler,
   menuHandler,
   listHandler,
   modeHandler,
 }: NavProps) => {
   return (
     <Nav mode={modeState.toString()}>
-      <LogoBox>로고</LogoBox>
+      <LogoBox onClick={logoHandler}>
+        <LogoSpan>P</LogoSpan>
+      </LogoBox>
       <Menu toggle={toggleState.toString()} onClick={menuHandler}>
         <Hamberger mode={modeState.toString()}></Hamberger>
         <Hamberger mode={modeState.toString()}></Hamberger>
