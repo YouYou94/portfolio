@@ -31,6 +31,10 @@ export const IntrduceBox = styled(Box)`
 
   gap: 1rem;
 
+  @media screen and (min-width: 769px) {
+    align-items: center;
+  }
+
   @media screen and (max-width: 768px) {
     padding: 2rem 3rem;
   }
@@ -40,6 +44,16 @@ export const TechBox = styled(Box)`
   flex-direction: row;
 
   gap: 0.5rem;
+`;
+
+export const BadgeBox = styled(Box)`
+  flex-direction: row;
+
+  gap: 0.5rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const TechBadge = styled.div<{ backgroundcolor: string }>`
@@ -99,6 +113,10 @@ export const IntroduceSpan = styled(Span)`
   font-size: 1.25rem;
 
   line-height: 1.75;
+
+  @media screen and (min-width: 769px) {
+    white-space: pre-wrap;
+  }
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;
