@@ -58,6 +58,10 @@ export const LogoSpan = styled.span`
   &:hover {
     color: #ffd369;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.75rem;
+  }
 `;
 
 export const Menu = styled(Box)<{ toggle: string }>`

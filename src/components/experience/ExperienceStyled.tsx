@@ -94,6 +94,10 @@ export const Project = styled.div<{ mode: string }>`
   &:hover {
     transform: translateY(-0.5rem);
   }
+
+  @media screen and (max-width: 768px) {
+    //height: 26rem;
+  }
 `;
 
 export const Line = styled.div`
