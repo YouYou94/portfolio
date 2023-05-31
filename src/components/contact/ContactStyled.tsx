@@ -9,6 +9,6 @@ export const Contact = styled.section`
   padding: 0 0 0 6rem;
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 0 1rem 0;
+    padding: 0 0.5rem 1rem 0.5rem;
   }
 `;

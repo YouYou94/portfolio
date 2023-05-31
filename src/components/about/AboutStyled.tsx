@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const About = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ export const About = styled.section`
   padding: 0 0 0 6rem;
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 0 1rem 0;
+    padding: 0 0.5rem;
   }
 `;
 
@@ -25,16 +25,14 @@ export const TitleBox = styled(Box)`
 `;
 
 export const IntrduceBox = styled(Box)`
-  flex: 1;
-
   justify-content: center;
 
-  padding: 0 6rem 0 6rem;
+  padding: 2rem 6rem;
 
   gap: 1rem;
 
   @media screen and (max-width: 768px) {
-    padding: 0 3rem 0 3rem;
+    padding: 2rem 3rem;
   }
 `;
 

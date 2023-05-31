@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Experience = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@ export const Experience = styled.section`
   padding: 0 0 0 6rem;
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 0 1rem 0;
+    padding: 0 0.5rem;
   }
 `;
 
@@ -43,10 +43,10 @@ export const TitleBox = styled(Box)`
 export const ProjectBox = styled(Box)`
   position: relative;
 
-  flex: 1;
-
   justify-content: center;
   align-items: center;
+
+  padding: 3rem 0;
 
   overflow: hidden;
 
