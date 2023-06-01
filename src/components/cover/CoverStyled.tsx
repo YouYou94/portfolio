@@ -1,26 +1,17 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Cover = styled.section`
+export const Layout = styled.section`
   width: 100%;
   height: 100vh;
 
   display: flex;
   flex-direction: column;
-
-  padding: 1rem 0 0 6rem;
-
-  @media screen and (max-width: 768px) {
-    padding: 4rem 0.5rem 0 0.5rem;
-  }
 `;
 
-export const Br = styled.br``;
-
-export const TitleBox = styled.div`
-  flex: 1;
-
+export const Box = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -30,6 +21,10 @@ export const Span = styled.span`
   &:hover {
     color: #ffd369;
   }
+`;
+
+export const TitleBox = styled(Box)`
+  flex: 2;
 `;
 
 export const Title = styled(Span)`
@@ -46,55 +41,44 @@ export const SubTitle = styled(Span)`
   font-size: 1.1rem;
 `;
 
-export const ScrollBox = styled.div`
+export const ClickBox = styled.div<{ mode: string }>`
   flex: 1;
 
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
-  gap: 1rem;
-`;
-
-export const Mouse = styled.div<{ mode: string }>`
-  width: 2.3rem;
-  height: 3.3rem;
-
-  display: flex;
-  justify-content: center;
-
-  border: 3px solid ${(prop) => (prop.mode === 'true' ? '#393e46' : '#eeeeee')};
-  border-radius: 25px;
-  padding-top: 0.5rem;
-
-  &:hover {
-    border: 3px solid #ffd369;
+  > div {
+    border-left: 5px solid
+      ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#393e46')};
+    border-bottom: 5px solid
+      ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#393e46')};
   }
 `;
 
-const ScrollMove = keyframes`
-  0% {
+const Move = keyframes`
+   0% {
     opacity: 0;
   }
   10% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(.5rem);
+    transform: translateX(.5rem) ;
     opacity: 0;
   }
 `;
 
-export const Scroller = styled.div<{ mode: string }>`
-  height: 0.6rem;
+export const ClickSpan = styled(Span)`
+  font-family: 'Anton';
+  font-size: 2rem;
 
-  border: 2px solid ${(prop) => (prop.mode === 'true' ? '#222831' : '#eeeeee')};
+  animation: ${Move} 2s ease-in infinite;
 
-  animation: ${ScrollMove} 2s ease-out infinite;
+  cursor: pointer;
 
-  ${Mouse}:hover & {
-    border: 2px solid #ffd369;
+  &:hover {
+    animation: none;
   }
 `;
