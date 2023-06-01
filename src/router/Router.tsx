@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Portfolio, Details } from '../pages';
-import { Nav } from '../components';
+import { About, Home } from '../pages';
+import { Header } from '../components';
 
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Nav />
+      <Header />
       <Routes>
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/project/:id" element={<Details />} />
+        <Route path="/portfolio" element={<Home />} />
+        <Route path="/portfolio/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
