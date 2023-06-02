@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { About, Home } from '../pages';
+import { About, Experience, Home } from '../pages';
 import { Header } from '../components';
 
 export const Router = () => {
@@ -9,6 +9,7 @@ export const Router = () => {
       <Routes>
         <Route path="/portfolio" element={<Home />} />
         <Route path="/portfolio/about" element={<About />} />
+        <Route path="/portfolio/project" element={<Experience />} />
       </Routes>
     </BrowserRouter>
   );
