@@ -17,10 +17,11 @@ import {
 } from './HeaderStyled';
 import { useRecoilState } from 'recoil';
 import { modeState } from '../../recoil/atom';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [mode, setMode] = useRecoilState(modeState);
   const [isToggle, setIsToggle] = useState<boolean>(false);
 
@@ -66,10 +67,30 @@ export const Header = () => {
       </Hamberger>
       {/* Default Menu */}
       <Menu>
-        <Item onClick={() => navigate('/portfolio')}>HOME</Item>
-        <Item onClick={() => navigate('/portfolio/about')}>ABOUT</Item>
-        <Item onClick={() => navigate('/portfolio/project')}>PROJECT</Item>
-        <Item onClick={() => navigate('/portfolio/contact')}>CONTACT</Item>
+        <Item
+          islocation={(location.pathname === '/portfolio').toString()}
+          onClick={() => navigate('/portfolio')}
+        >
+          HOME
+        </Item>
+        <Item
+          islocation={(location.pathname === '/portfolio/about').toString()}
+          onClick={() => navigate('/portfolio/about')}
+        >
+          ABOUT
+        </Item>
+        <Item
+          islocation={(location.pathname === '/portfolio/project').toString()}
+          onClick={() => navigate('/portfolio/project')}
+        >
+          PROJECT
+        </Item>
+        <Item
+          islocation={(location.pathname === '/portfolio/contact').toString()}
+          onClick={() => navigate('/portfolio/contact')}
+        >
+          CONTACT
+        </Item>
       </Menu>
 
       {/* Responsive Menu */}

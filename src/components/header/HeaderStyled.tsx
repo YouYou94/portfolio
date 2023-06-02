@@ -7,6 +7,8 @@ export const Layout = styled.header<{ mode: string }>`
   display: flex;
   justify-content: space-between;
 
+  padding: 0 3rem;
+
   background-color: ${(prop) =>
     prop.mode === 'true' ? '#222831' : 'rgb(255, 255, 255)'};
   color: ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#222831')};
@@ -25,9 +27,7 @@ export const Box = styled.div`
   cursor: pointer;
 `;
 
-export const Logo = styled(Box)`
-  margin-left: 0.5rem;
-`;
+export const Logo = styled(Box)``;
 
 export const LogoSpan = styled.span<{ mode: string }>`
   font-family: 'LilitaOne';
@@ -77,8 +77,6 @@ export const Icon = styled.div`
 
 /* Default Menu */
 export const Menu = styled.ul`
-  flex: 1;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,9 +88,11 @@ export const Menu = styled.ul`
   }
 `;
 
-export const Item = styled.li`
+export const Item = styled.li<{ islocation: string }>`
   font-family: 'Anton';
   font-size: 1.5rem;
+
+  color: ${(prop) => (prop.islocation === 'true' ? '#ffd369' : '')};
 
   cursor: pointer;
 
