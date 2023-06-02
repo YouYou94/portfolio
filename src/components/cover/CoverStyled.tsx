@@ -1,10 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const Open = keyframes`
+  0% {
+    opacity: 0;
+  } 
+	85% {
+		opacity: 1;
+  }
+`;
 
 export const Layout = styled.section`
   flex: 1;
 
   display: flex;
   flex-direction: column;
+
+  animation: ${Open} 3s ease;
 `;
 
 export const Box = styled.div`

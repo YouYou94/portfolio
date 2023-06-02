@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { useRecoilValue } from 'recoil';
-import { styled } from 'styled-components';
+import { styled, keyframes } from 'styled-components';
 import { getModeState } from '../../recoil/selector';
 
 type TemplateProps = {
@@ -13,14 +13,40 @@ export const Template = ({ children }: TemplateProps) => {
   return <Layout mode={mode.toString()}>{children}</Layout>;
 };
 
+const Open = keyframes`
+  10% {
+    transform: scale(1, 0.002);
+    background-color: #222831;
+  } 
+  35% {
+    transform: scale(0.2, 0.002);
+    background-color: #222831;
+		opacity: 1;
+  }
+	50% {
+    transform: scale(0.2, 0.002);
+    background-color: #222831;
+		opacity: 0;
+  }
+	85% {
+    transform: scale(1, 0.002);
+    background-color: #222831;
+		opacity: 1;
+  }
+	100% {
+    transform: scale(1, 1);
+  }
+`;
+
 const Layout = styled.main<{ mode: string }>`
-  width: 100%;
-  height: 100%;
+  flex: 1;
 
   display: flex;
   flex-direction: column;
 
   background-color: ${(prop) =>
-    prop.mode === 'true' ? 'rgb(255, 255, 255)' : '#222831'};
-  color: ${(prop) => (prop.mode === 'true' ? '#222831' : '#eeeeee')};
+    prop.mode === 'true' ? '#222831' : 'rgb(255, 255, 255)'};
+  color: ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#222831')};
+
+  animation: ${Open} 3s ease;
 `;
