@@ -1,16 +1,15 @@
 import styled, { keyframes } from 'styled-components';
 import ModeIconUrl from '../../assets/mode.png';
 
-export const Layout = styled.header`
-  position: fixed;
-
-  width: 100%;
+export const Layout = styled.header<{ mode: string }>`
   height: 5rem;
 
   display: flex;
   justify-content: space-between;
 
-  background-color: transparent;
+  background-color: ${(prop) =>
+    prop.mode === 'true' ? '#222831' : 'rgb(255, 255, 255)'};
+  color: ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#222831')};
 `;
 
 export const Box = styled.div`
@@ -76,6 +75,33 @@ export const Icon = styled.div`
   background-size: cover;
 `;
 
+/* Default Menu */
+export const Menu = styled.ul`
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const Item = styled.li`
+  font-family: 'Anton';
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #ffd369;
+  }
+`;
+
+/* Responsive Menu */
 export const Hamberger = styled(Box)<{ mode: string; toggle: string }>`
   flex-direction: column;
 
@@ -97,6 +123,10 @@ export const Hamberger = styled(Box)<{ mode: string; toggle: string }>`
       ${(prop) => (prop.toggle === 'true' ? 'opacity: 0' : '')};
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
 `;
 
 export const Bar = styled.span`
@@ -114,8 +144,7 @@ export const Bar = styled.span`
   }
 `;
 
-/* Menu */
-export const Menu = styled.div<{ mode: string; toggle: string }>`
+export const ResponsiveMenu = styled.div<{ mode: string; toggle: string }>`
   position: absolute;
 
   width: 100vw;
@@ -137,7 +166,7 @@ export const Menu = styled.div<{ mode: string; toggle: string }>`
   z-index: 1;
 `;
 
-export const List = styled.ul`
+export const ResponsiveList = styled.ul`
   width: 30rem;
 
   flex: 1;
@@ -161,7 +190,7 @@ const Move = keyframes`
   }
 `;
 
-export const Item = styled.li`
+export const ResponsiveItem = styled.li`
   width: 18rem;
 
   display: flex;
