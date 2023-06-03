@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Carousel, Template } from '../components';
+import { Carousel, Readme, Template } from '../components';
 
 const Experience = () => {
   const [isReadme, setIsReadme] = useState<boolean>(false);
@@ -7,6 +7,7 @@ const Experience = () => {
   return (
     <Template>
       <Carousel state={isReadme} setState={setIsReadme} />
+      {isReadme ? <Readme state={isReadme} setState={setIsReadme} /> : <></>}
     </Template>
   );
 };

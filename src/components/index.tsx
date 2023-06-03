@@ -5,3 +5,4 @@ export { Cover } from './cover/Cover';
 export { Introduce } from './about/introduce/Introduce';
 export { Tech } from './about/tech/Tech';
 export { Carousel } from './experience/carousel/Carousel';
+export { Readme } from './experience/readme/Readme';
