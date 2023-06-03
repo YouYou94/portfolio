@@ -4,4 +4,4 @@ export { Header } from './header/Header';
 export { Cover } from './cover/Cover';
 export { Introduce } from './about/introduce/Introduce';
 export { Tech } from './about/tech/Tech';
-export { Carousel } from './experience/Carousel';
+export { Carousel } from './experience/carousel/Carousel';
