@@ -2,6 +2,7 @@ import { useRecoilValue } from 'recoil';
 import { ProjectList } from '../../Constants';
 import { getModeState } from '../../recoil/selector';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Layout,
   Title,
@@ -25,6 +26,7 @@ import {
 } from './CarouselStyled';
 
 export const Carousel = () => {
+  const navigate = useNavigate();
   const mode = useRecoilValue(getModeState);
   const [now, setNow] = useState<number>(0);
 
@@ -72,6 +74,15 @@ export const Carousel = () => {
                     <LinkAnchor href={link.demo} target="_blank">
                       Visite Site
                     </LinkAnchor>
+                    {id === 0 ? (
+                      <></>
+                    ) : (
+                      <LinkAnchor
+                        onClick={() => navigate(`/portfolio/project/${id}`)}
+                      >
+                        ReadMe
+                      </LinkAnchor>
+                    )}
                   </LinkBox>
                 </ProjectBox>
               );

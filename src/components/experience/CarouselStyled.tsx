@@ -32,6 +32,14 @@ export const Container = styled.div`
   display: flex;
 
   gap: 5rem;
+
+  @media screen and (max-width: 1024px) {
+    gap: 2.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 0.75rem;
+  }
 `;
 
 export const StepBox = styled.div`
@@ -152,6 +160,8 @@ export const TechSpan = styled.div`
 export const LinkBox = styled.div<{ mode: string }>`
   display: flex;
 
+  margin-top: 1rem;
+
   gap: 1rem;
 
   > a {
@@ -181,6 +191,8 @@ export const LinkAnchor = styled.a`
   border-radius: 0.5rem;
 
   font-family: 'GowunDodum';
+
+  cursor: pointer;
 `;
 
 export const ButtonBox = styled.div`
