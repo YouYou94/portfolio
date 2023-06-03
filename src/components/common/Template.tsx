@@ -16,16 +16,13 @@ export const Template = ({ children }: TemplateProps) => {
 const Open = keyframes`
   10% {
     transform: scale(1, 0.002);
-    background-color: #222831;
   } 
   35% {
     transform: scale(0.2, 0.002);
-    background-color: #222831;
 		opacity: 1;
   }
 	50% {
     transform: scale(0.2, 0.002);
-    background-color: #222831;
 		opacity: 0;
   }
 	85% {

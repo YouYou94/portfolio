@@ -7,8 +7,6 @@ export const Layout = styled.header<{ mode: string }>`
   display: flex;
   justify-content: space-between;
 
-  padding: 0 3rem;
-
   background-color: ${(prop) =>
     prop.mode === 'true' ? '#222831' : 'rgb(255, 255, 255)'};
   color: ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#222831')};
