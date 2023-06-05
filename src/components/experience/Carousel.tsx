@@ -24,12 +24,7 @@ import {
   Button,
 } from './CarouselStyled';
 
-type CarouselProps = {
-  state?: boolean;
-  setState?: Dispatch<SetStateAction<boolean>>;
-};
-
-export const Carousel = ({ state, setState }: CarouselProps) => {
+export const Carousel = () => {
   const mode = useRecoilValue(getModeState);
   const [now, setNow] = useState<number>(0);
 
