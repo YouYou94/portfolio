@@ -1,32 +1,26 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const Open = keyframes`
-  0% {
-    opacity: 0;
-  } 
-	85% {
-		opacity: 1;
-  }
-`;
-
-export const Layout = styled.section`
+export const Box = styled.div`
   flex: 1;
+
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 
-  animation: ${Open} 3s ease;
+  border-top: 1px solid rgb(204, 204, 204);
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-family: 'Anton';
-  font-size: 3rem;
+  font-size: 5rem;
+
+  text-align: center;
 `;
 
-export const Container = styled.div`
+export const CarouselSlide = styled.div`
   flex: 1;
 
   display: flex;
@@ -76,31 +70,22 @@ export const Step = styled.div<{ rotate: number; mode: string }>`
 
 /* Carousel */
 export const CarouselBox = styled.div`
-  width: 45rem;
+  flex: 1;
 
   display: flex;
   flex-direction: column;
 
   overflow: hidden;
-
-  @media screen and (max-width: 1024px) {
-    width: 30rem;
-  }
 `;
 
 export const SlideBox = styled.div<{ length: number; now: number }>`
-  width: ${(prop) => prop.length * 45}rem;
+  width: ${(prop) => prop.length * 100}%;
   height: 100%;
 
   display: flex;
 
-  transform: translate(-${(prop) => prop.now * 45}rem);
+  transform: translate(-${(prop) => prop.now * 25}%);
   transition: all 0.5s;
-
-  @media screen and (max-width: 1024px) {
-    width: ${(prop) => prop.length * 30}rem;
-    transform: translate(-${(prop) => prop.now * 30}rem);
-  }
 `;
 
 export const ProjectBox = styled.div`

@@ -1,11 +1,11 @@
 import { useRecoilValue } from 'recoil';
-import { ProjectList } from '../../../Constants';
-import { getModeState } from '../../../recoil/selector';
+import { ProjectList } from '../../Constants';
+import { getModeState } from '../../recoil/selector';
 import { useState, Dispatch, SetStateAction } from 'react';
 import {
-  Layout,
+  Box,
   Title,
-  Container,
+  CarouselSlide,
   StepBox,
   Step,
   CarouselBox,
@@ -25,8 +25,8 @@ import {
 } from './CarouselStyled';
 
 type CarouselProps = {
-  state: boolean;
-  setState: Dispatch<SetStateAction<boolean>>;
+  state?: boolean;
+  setState?: Dispatch<SetStateAction<boolean>>;
 };
 
 export const Carousel = ({ state, setState }: CarouselProps) => {
@@ -44,9 +44,9 @@ export const Carousel = ({ state, setState }: CarouselProps) => {
   };
 
   return (
-    <Layout>
+    <Box>
       <Title>PROJECT</Title>
-      <Container>
+      <CarouselSlide>
         <StepBox>
           <Step
             rotate={45}
@@ -77,13 +77,7 @@ export const Carousel = ({ state, setState }: CarouselProps) => {
                     <LinkAnchor href={link.demo} target="_blank">
                       Visite Site
                     </LinkAnchor>
-                    {id === 0 ? (
-                      <></>
-                    ) : (
-                      <LinkAnchor onClick={() => setState(!state)}>
-                        ReadMe
-                      </LinkAnchor>
-                    )}
+                    {id === 0 ? <></> : <LinkAnchor>ReadMe</LinkAnchor>}
                   </LinkBox>
                 </ProjectBox>
               );
@@ -109,7 +103,7 @@ export const Carousel = ({ state, setState }: CarouselProps) => {
             onClick={handleClickRightStep}
           />
         </StepBox>
-      </Container>
-    </Layout>
+      </CarouselSlide>
+    </Box>
   );
 };
