@@ -31,8 +31,8 @@ const Box = styled.div`
 `;
 
 const Button = styled.button<{ mode: string }>`
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
 
   display: flex;
   justify-content: center;

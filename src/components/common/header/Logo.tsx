@@ -8,7 +8,7 @@ type Props = {
 export const Logo = ({ state }: Props) => {
   return (
     <Box>
-      <Link to="top">
+      <Link to="top" spy={true} smooth={true}>
         <Button mode={state.toString()} title="YouYou94 | 처음으로 돌아가기">
           Y
         </Button>
@@ -22,6 +22,8 @@ const Box = styled.div`
   height: 4rem;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Button = styled.button<{ mode: string }>`
