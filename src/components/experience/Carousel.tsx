@@ -77,7 +77,6 @@ export const Carousel = ({ state, setState }: CarouselProps) => {
                     <LinkAnchor href={link.demo} target="_blank">
                       Visite Site
                     </LinkAnchor>
-                    {id === 0 ? <></> : <LinkAnchor>ReadMe</LinkAnchor>}
                   </LinkBox>
                 </ProjectBox>
               );

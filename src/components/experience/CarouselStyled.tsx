@@ -4,13 +4,14 @@ export const Box = styled.div`
   flex: 1;
 
   width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
 
-  padding: 1rem 2rem;
-
   border-top: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  padding: 0 2rem;
 `;
 
 export const Title = styled.h2`
@@ -24,16 +25,6 @@ export const CarouselSlide = styled.div`
   flex: 1;
 
   display: flex;
-
-  gap: 5rem;
-
-  @media screen and (max-width: 1024px) {
-    gap: 2.5rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    gap: 0.75rem;
-  }
 `;
 
 export const StepBox = styled.div`
@@ -100,13 +91,14 @@ export const ProjectBox = styled.div`
 `;
 
 export const UserImg = styled.div<{ mode: string; imageurl: string }>`
-  aspect-ratio: 2 / 1;
+  flex: 1;
 
   border: 1px solid ${(prop) => (prop.mode === 'true' ? '#eeeeee' : '#393e46')};
 
   background-image: url(${(prop) => prop.imageurl});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 `;
 
 export const ProjectTitleBox = styled.div`
@@ -181,10 +173,11 @@ export const LinkAnchor = styled.a`
 `;
 
 export const ButtonBox = styled.div`
-  height: 4rem;
+  height: 3rem;
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
   gap: 3rem;
 `;
