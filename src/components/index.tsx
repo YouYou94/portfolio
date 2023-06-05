@@ -1,8 +1,9 @@
-export { Template } from './common/Template';
+/* Common */
+export { Header } from './common/header/Header';
 
-export { Header } from './header/Header';
+/* Layout */
+export { Container } from './layout/Container';
+
+/* Components */
 export { Cover } from './cover/Cover';
-export { Introduce } from './about/introduce/Introduce';
-export { Tech } from './about/tech/Tech';
-export { Carousel } from './experience/carousel/Carousel';
-export { Readme } from './experience/readme/Readme';
+export { Mouse } from './cover/Mouse';
