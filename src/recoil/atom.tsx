@@ -1,6 +1,11 @@
 import { atom } from 'recoil';
 
-export const modeState = atom<boolean>({
-  key: 'modeState',
+export const mode = atom<boolean>({
+  key: 'mode',
+  default: false,
+});
+
+export const toggle = atom<boolean>({
+  key: 'toggle',
   default: false,
 });
