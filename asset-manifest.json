@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f6bebbc1.css",
-    "main.js": "/portfolio/static/js/main.38ff702b.js",
+    "main.css": "/portfolio/static/css/main.c5c3005c.css",
+    "main.js": "/portfolio/static/js/main.c6cbe3d2.js",
     "static/media/GowunDodum-Regular.ttf": "/portfolio/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/orderapp.png": "/portfolio/static/media/orderapp.ceba91961108fbdf6224.png",
     "static/media/Alkatra-Regular.ttf": "/portfolio/static/media/Alkatra-Regular.23ab70245e38b361521f.ttf",
@@ -11,13 +11,12 @@
     "static/media/Anton-Regular.ttf": "/portfolio/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
     "static/media/LilitaOne-Regular.ttf": "/portfolio/static/media/LilitaOne-Regular.6f506507b06161b73e85.ttf",
     "static/media/memoapp.png": "/portfolio/static/media/memoapp.8bb013ccb1d6ba78a5ad.png",
-    "static/media/mode.png": "/portfolio/static/media/mode.fcf603597fdeac3ea688.png",
     "index.html": "/portfolio/index.html",
-    "main.f6bebbc1.css.map": "/portfolio/static/css/main.f6bebbc1.css.map",
-    "main.38ff702b.js.map": "/portfolio/static/js/main.38ff702b.js.map"
+    "main.c5c3005c.css.map": "/portfolio/static/css/main.c5c3005c.css.map",
+    "main.c6cbe3d2.js.map": "/portfolio/static/js/main.c6cbe3d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6bebbc1.css",
-    "static/js/main.38ff702b.js"
+    "static/css/main.c5c3005c.css",
+    "static/js/main.c6cbe3d2.js"
   ]
 }
