@@ -6,8 +6,22 @@ export const Layout = styled.header<{ mode: string }>`
   display: flex;
   flex-direction: column;
 
+  margin: 0 5rem;
   border-bottom: 4px solid
-    ${(prop) => (prop.mode === 'true' ? 'rgb(238, 238, 238)' : '#e7746f')};
+    ${(prop) =>
+      prop.mode === 'true' ? 'rgb(238, 238, 238)' : 'rgb(66, 90, 115)'};
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 4rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0 1rem;
+  }
 `;
 
 const Box = styled.div`
@@ -32,7 +46,7 @@ export const Hamberger = styled.div<{ mode: string; toggle: string }>`
 
   > Span {
     background-color: ${(prop) =>
-      prop.mode === 'true' ? 'rgb(238, 238, 238)' : '#e7746f'};
+      prop.mode === 'true' ? 'rgb(238, 238, 238)' : 'rgb(66, 90, 115)'};
 
     ${(prop) => (prop.toggle === 'true' ? 'position: absolute' : '')};
 
@@ -63,7 +77,11 @@ export const Bar = styled.span`
   border-radius: 3px;
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.2s ease;
+
+  ${Hamberger}:hover & {
+    background-color: #e7746f;
+  }
 `;
 
 export const ModeChanger = styled.div<{ mode: string }>`
@@ -136,5 +154,9 @@ export const Contact = styled.div`
 export const Link = styled.a`
   ${Contact}:hover & {
     color: #e7746f;
+  }
+
+  &:visited {
+    color: inherit;
   }
 `;
