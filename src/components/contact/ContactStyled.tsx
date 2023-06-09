@@ -1,18 +1,7 @@
 import styled from 'styled-components';
 
-export const Layout = styled.section`
-  padding: 2rem 0;
-
+export const Layout = styled.div`
   display: flex;
-  flex-direction: column;
-`;
-
-export const Box = styled.div`
-  display: flex;
-`;
-
-export const ContactBox = styled(Box)`
-  padding: 2rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -22,43 +11,36 @@ export const ContactBox = styled(Box)`
   }
 `;
 
-export const Email = styled(Box)`
-  flex: 1;
-
-  flex-direction: column;
-
-  gap: 1rem;
-`;
-
-export const LinkedIn = styled(Box)`
-  flex: 1;
-
-  flex-direction: column;
-
-  @media screen and (max-width: 768px) {
-    border-top: 3px solid rgb(245, 245, 245);
-    padding-top: 2rem;
-  }
-`;
-
-export const TitleBox = styled.div`
+export const Box = styled.div`
   display: flex;
 `;
 
-export const Title = styled.h2`
-  font-family: 'Alkatra';
+export const Email = styled.div`
+  flex: 1;
 
-  border-bottom: 3px solid #f56a6a;
-`;
+  display: flex;
+  flex-direction: column;
 
-export const SubTitle = styled.h3`
-  font-family: 'Alkatra';
-
-  border-bottom: 2px solid #f56a6a;
+  gap: 1rem;
 
   @media screen and (max-width: 768px) {
-    width: 20rem;
+    border-bottom: 3px solid rgb(245, 245, 245);
+    padding-bottom: 2rem;
   }
+`;
+
+export const LinkedIn = styled.div`
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+export const H3 = styled.h3`
+  font-family: 'Alkatra';
+  font-size: 1.25rem;
+
+  border-bottom: 2px solid #f56a6a;
 `;
 
 /* Email */
@@ -85,6 +67,8 @@ export const TextArea = styled.textarea`
   height: 10rem;
 
   padding: 0.5rem;
+
+  resize: none;
 
   @media screen and (max-width: 768px) {
     width: 20rem;

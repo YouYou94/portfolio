@@ -35,61 +35,55 @@ export const Contact = () => {
 
   return (
     <S.Layout>
-      <S.TitleBox>
-        <S.Title>Contact</S.Title>
-      </S.TitleBox>
-      <S.ContactBox>
-        <S.Email id="contact">
-          <S.TitleBox>
-            <S.SubTitle>Send Your Message</S.SubTitle>
-          </S.TitleBox>
-
-          <S.Form ref={form} onSubmit={handleSubmitSendMessage}>
-            <S.Input name="from_email" placeholder="email@google.com" />
-            <S.Input name="user_name" placeholder="your name" />
-            <S.Input name="phone" placeholder="010-xxxx-xxxx" />
-            <S.TextArea name="message" placeholder="Your Message..." />
-            <S.Button>Send Message</S.Button>
-          </S.Form>
-        </S.Email>
-        <S.LinkedIn>
-          <S.TitleBox>
-            <S.SubTitle>Linked In</S.SubTitle>
-          </S.TitleBox>
-          <S.IconContainer>
-            <S.IconBox
-              mode={mode.toString()}
-              title="클릭하여 블로그 주소 바로가기"
-            >
-              <S.Link href="https://velog.io/@ybh4115" target="_blank">
-                <FontAwesomeIcon icon={faBloggerB} size="2x" />
-              </S.Link>
-            </S.IconBox>
-            <S.IconBox
-              mode={mode.toString()}
-              title="클릭하여 깃허브 주소 바로가기"
-            >
-              <S.Link href="https://github.com/YouYou94" target="_blank">
-                <FontAwesomeIcon icon={faGithub} size="2x" />
-              </S.Link>
-            </S.IconBox>
-            <S.IconBox
-              mode={mode.toString()}
-              onClick={() => handleCopyClipBoard('01051906628')}
-              title="클릭하여 전화번호 복사하기"
-            >
-              <FontAwesomeIcon icon={faPhone} size="2x" />
-            </S.IconBox>
-            <S.IconBox
-              mode={mode.toString()}
-              onClick={() => handleCopyClipBoard('ybh4115@gmail.com')}
-              title="클릭하여 이메일 복사하기"
-            >
-              <FontAwesomeIcon icon={faEnvelope} size="2x" />
-            </S.IconBox>
-          </S.IconContainer>
-        </S.LinkedIn>
-      </S.ContactBox>
+      <S.Email id="contact">
+        <S.Box>
+          <S.H3>Send Your Message</S.H3>
+        </S.Box>
+        <S.Form ref={form} onSubmit={handleSubmitSendMessage}>
+          <S.Input name="from_email" placeholder="email@google.com" />
+          <S.Input name="user_name" placeholder="your name" />
+          <S.Input name="phone" placeholder="010-xxxx-xxxx" />
+          <S.TextArea name="message" placeholder="Your Message..." />
+          <S.Button>Send Message</S.Button>
+        </S.Form>
+      </S.Email>
+      <S.LinkedIn>
+        <S.Box>
+          <S.H3>Linked In</S.H3>
+        </S.Box>
+        <S.IconContainer>
+          <S.IconBox
+            mode={mode.toString()}
+            title="클릭하여 블로그 주소 바로가기"
+          >
+            <S.Link href="https://velog.io/@ybh4115" target="_blank">
+              <FontAwesomeIcon icon={faBloggerB} size="2x" />
+            </S.Link>
+          </S.IconBox>
+          <S.IconBox
+            mode={mode.toString()}
+            title="클릭하여 깃허브 주소 바로가기"
+          >
+            <S.Link href="https://github.com/YouYou94" target="_blank">
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </S.Link>
+          </S.IconBox>
+          <S.IconBox
+            mode={mode.toString()}
+            onClick={() => handleCopyClipBoard('01051906628')}
+            title="클릭하여 전화번호 복사하기"
+          >
+            <FontAwesomeIcon icon={faPhone} size="2x" />
+          </S.IconBox>
+          <S.IconBox
+            mode={mode.toString()}
+            onClick={() => handleCopyClipBoard('ybh4115@gmail.com')}
+            title="클릭하여 이메일 복사하기"
+          >
+            <FontAwesomeIcon icon={faEnvelope} size="2x" />
+          </S.IconBox>
+        </S.IconContainer>
+      </S.LinkedIn>
     </S.Layout>
   );
 };
