@@ -7,7 +7,7 @@ import {
   faB,
   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import * as S from './HeaderStyled';
 import { Link } from 'react-scroll';
 
@@ -60,6 +60,11 @@ export const Header = () => {
           <S.Contact title="메일 보내기">
             <Link to="contact" spy={true} smooth={true}>
               <FontAwesomeIcon icon={faEnvelope} size="lg" />
+            </Link>
+          </S.Contact>
+          <S.Contact title="링크드인">
+            <Link to="contact" spy={true} smooth={true}>
+              <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
             </Link>
           </S.Contact>
         </S.ContactBox>
