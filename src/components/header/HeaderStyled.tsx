@@ -35,7 +35,11 @@ export const Top = styled(Box)`
   justify-content: space-between;
 `;
 
-export const Hamberger = styled.div<{ mode: string; toggle: string }>`
+export const Hamberger = styled.div<{
+  scroll: number;
+  mode: string;
+  toggle: string;
+}>`
   width: 4rem;
   height: 4rem;
 
@@ -43,6 +47,15 @@ export const Hamberger = styled.div<{ mode: string; toggle: string }>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${(prop) =>
+    prop.scroll >= 100
+      ? `position:fixed; top: 1rem; border-radius: 50%; ${
+          prop.mode === 'true'
+            ? 'background-color: rgb(66, 90, 115, .9)'
+            : 'background-color: rgb(245, 245, 245, .9)'
+        }; z-index: 99;`
+      : ''}
 
   > Span {
     background-color: ${(prop) =>

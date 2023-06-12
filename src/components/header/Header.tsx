@@ -8,17 +8,28 @@ import {
   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import * as S from './HeaderStyled';
 import { Link } from 'react-scroll';
+import { useEffect, useState } from 'react';
+import * as S from './HeaderStyled';
 
 export const Header = () => {
   const [isToggle, setIsToggle] = useRecoilState(toggle);
   const [isMode, setIsMode] = useRecoilState(mode);
+  const [scrollPercent, setScrollPercent] = useState<number>(0);
+
+  const updateScroll = () => {
+    setScrollPercent(window.scrollY || document.documentElement.scrollTop);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', updateScroll);
+  });
 
   return (
     <S.Layout mode={isMode.toString()}>
       <S.Top>
         <S.Hamberger
+          scroll={scrollPercent}
           mode={isMode.toString()}
           toggle={isToggle.toString()}
           onClick={() => setIsToggle(!isToggle)}
