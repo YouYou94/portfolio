@@ -5,7 +5,6 @@ export const Layout = styled.section`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   padding: 2rem 0;
@@ -24,24 +23,9 @@ export const Email = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  border-bottom: 3px solid rgb(245, 245, 245);
-  padding-bottom: 2rem;
+  justify-content: center;
 
   gap: 1rem;
-
-  @media screen and (max-width: 768px) {
-    width: 25rem;
-  }
-`;
-
-export const LinkedIn = styled.div`
-  width: 30rem;
-
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
 
   @media screen and (max-width: 768px) {
     width: 25rem;
@@ -102,37 +86,5 @@ export const Button = styled.button<{ mode?: string }>`
 
   &:hover {
     background-color: #f56a6a;
-  }
-`;
-
-export const IconContainer = styled.div`
-  flex: 1;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const IconBox = styled.div<{ mode: string }>`
-  width: 4rem;
-  height: 4rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    background-color: ${(prop) =>
-      prop.mode === 'true' ? '' : 'rgb(245, 245, 245)'};
-
-    color: #e7746f;
-  }
-
-  cursor: pointer;
-`;
-
-export const Link = styled.a`
-  &:visited {
-    color: inherit;
   }
 `;
