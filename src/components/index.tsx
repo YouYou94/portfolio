@@ -1,9 +1,8 @@
 /* Components */
-export { Header } from './header/Header';
-export { Intro } from './intro/Intro';
+export { Introduce } from './introduce/Introduce';
 export { Experience } from './experience/Experience';
 export { Contact } from './contact/Contact';
 
-/* Common */
-export { Template } from './common/Template';
-export { Title } from './common/Title';
+export { CommonHeader } from './header/CommonHeader';
+export { Cover } from './cover/Cover';
+export { Nav } from './nav/Nav';
