@@ -30,7 +30,7 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 5rem 0;
+  padding: 6rem 0;
 `;
 
 const CoverImg = styled.img`
