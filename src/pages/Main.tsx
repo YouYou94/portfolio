@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { CommonHeader, Cover, Introduce, Contact } from '../components';
+import { Cover, Introduce, Contact } from '../components';
 import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { getMode } from '../recoil';
@@ -15,13 +15,13 @@ const Main = () => {
 
   return (
     <Layout mode={mode.toString()}>
-      {/* 헤더 */}
-      <CommonHeader />
       {/* 커버 */}
       <Cover />
-      {/* 메뉴 */}
+      {/* 소개 */}
       <Introduce />
+      {/* 프로젝트 */}
       <></>
+      {/* 연락 */}
       <Contact />
     </Layout>
   );

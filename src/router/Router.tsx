@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from '../pages/Main';
-import Detail from '../pages/Detail';
+import { Main } from '../pages';
+import { CommonHeader } from '../components';
 
 export const Router = () => {
   return (
     <BrowserRouter>
+      <CommonHeader />
       <Routes>
         <Route path="/portfolio" element={<Main />} />
-        <Route path="/portfolio/:id" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );
