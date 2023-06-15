@@ -1,12 +1,17 @@
 import { styled } from 'styled-components';
-import { CommonHeader, Cover, Nav, Introduce, Contact } from '../components';
+import { CommonHeader, Cover, Introduce, Contact } from '../components';
 import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { getMode } from '../recoil';
 
+// 스크롤 시 한 영역 씩 스크롤 다운
+// 헤더는 공통으로하고 fixed
+// -> 이렇게 되면 자연스레 Header는 공통 컴포넌트로 빠지고
+// Nav 없애기
+// -> Nav 없애는 대신 맨 위에 추가하고 스크롤 시 옆에 하나 추가
+
 const Main = () => {
   const mode = useRecoilValue(getMode);
-  const [page, setPage] = useState<number>(0);
 
   return (
     <Layout mode={mode.toString()}>
@@ -15,10 +20,9 @@ const Main = () => {
       {/* 커버 */}
       <Cover />
       {/* 메뉴 */}
-      <Nav state={page} setState={setPage} />
-      {page === 0 ? <Introduce /> : <></>}
-      {page === 1 ? <></> : <></>}
-      {page === 2 ? <Contact /> : <></>}
+      <Introduce />
+      <></>
+      <Contact />
     </Layout>
   );
 };
