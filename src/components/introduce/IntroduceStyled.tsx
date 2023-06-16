@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Layout = styled.section`
-  height: calc(100vh - 4rem);
+  height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -9,56 +9,72 @@ export const Layout = styled.section`
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
+
+    gap: 1rem;
   }
 `;
 
 export const Box = styled.div`
-  max-width: 48rem;
-
   display: flex;
-
-  padding: 0 3rem;
 `;
 
-export const Tech = styled.div`
-  flex: 1;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 1rem;
-`;
-
-export const Introduce = styled.div`
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
-
-  font-family: 'GowunDodum';
-
-  gap: 1rem;
-`;
-
-export const H3 = styled.h3`
-  font-family: 'Alkatra';
-  font-size: 1.25rem;
-`;
-
-export const Strong = styled.strong``;
-
-export const Span = styled.span``;
-
-export const TechBedge = styled.div<{ mode: string }>`
+export const Picture = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border-radius: 0.5rem;
-  padding: 0 1rem;
+  @media screen and (min-width: 1025px) {
+    flex: 1;
 
+    padding: 0 3rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const Introduce = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'GowunDodum';
+  font-size: 1.125rem;
+
+  gap: 1rem;
+
+  @media screen and (min-width: 1025px) {
+    flex: 1;
+
+    padding: 0 3rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 48rem;
+
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 30rem;
+
+    padding: 0 0.5rem;
+
+    font-size: 1rem;
+  }
+`;
+
+export const IntroduceImg = styled.img`
+  width: 25rem;
+`;
+
+export const H3 = styled.h3`
   font-family: 'Alkatra';
+  font-size: 1.75rem;
 
-  border: 1px solid
-    ${(prop) => (prop.mode === 'true' ? '' : 'rgb(66, 90, 115)')};
+  border-bottom: 2px solid rgb(204, 204, 204);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `;
