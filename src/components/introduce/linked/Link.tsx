@@ -7,6 +7,16 @@ import { getMode } from '../../../recoil';
 
 export const Linked = () => {
   const mode = useRecoilValue(getMode);
+
+  const handleCopyClipBoard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert('클립보드에 복사되었습니다.');
+    } catch (e) {
+      alert('복사에 실패하였습니다');
+    }
+  };
+
   return (
     <>
       <LinkBox mode={mode.toString()}>
@@ -20,10 +30,16 @@ export const Linked = () => {
             <FontAwesomeIcon icon={faGithub} size="lg" />
           </Link>
         </LinkIconBox>
-        <LinkIconBox title="전화번호 복사하기">
+        <LinkIconBox
+          onClick={() => handleCopyClipBoard('010-5190-6628')}
+          title="전화번호 복사하기"
+        >
           <FontAwesomeIcon icon={faPhone} size="lg" />
         </LinkIconBox>
-        <LinkIconBox title="이메일 복사하기">
+        <LinkIconBox
+          onClick={() => handleCopyClipBoard('ybh4115@gmail.com')}
+          title="이메일 복사하기"
+        >
           <FontAwesomeIcon icon={faEnvelope} size="lg" />
         </LinkIconBox>
       </LinkBox>
