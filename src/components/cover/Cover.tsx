@@ -22,7 +22,7 @@ export const Cover = () => {
   );
 };
 
-const Box = styled.div`
+const Box = styled.section`
   height: 100vh;
 
   display: flex;

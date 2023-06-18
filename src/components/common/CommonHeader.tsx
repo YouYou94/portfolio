@@ -6,7 +6,7 @@ import { faSun, faMoon, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const CommonHeader = () => {
-  const [isMode, setIsMode] = useRecoilState(mode);
+  const [isMode, setIsMode] = useRecoilState<boolean>(mode);
   const [scrollPercent, setScrollPercent] = useState<number>(0);
 
   const handleClickMode = () => setIsMode(!isMode);
@@ -53,7 +53,7 @@ const Header = styled.header<{ mode: string; scroll: number }>`
   ${(prop) => (prop.scroll >= 100 ? '' : 'position: fixed')};
 
   width: 100%;
-  height: 4rem;
+  height: ${(prop) => (prop.scroll >= 100 ? '0' : '4rem')};
 
   display: flex;
   justify-content: space-between;

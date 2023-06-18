@@ -108,5 +108,5 @@ const Layout = styled.main<{ mode: string }>`
     prop.mode === 'true' ? 'rgb(34, 40, 49)' : ''};
 
   color: ${(prop) =>
-    prop.mode === 'true' ? 'rgb(238, 238, 238)' : 'rgb(34, 40, 49)'};
+    prop.mode === 'true' ? 'rgb(255, 255, 255)' : 'rgb(34, 40, 49)'};
 `;
