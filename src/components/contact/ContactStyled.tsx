@@ -1,11 +1,18 @@
 import styled from 'styled-components';
+import ContactImage from '../../assets/contact.png';
 
 export const Layout = styled.section`
-  height: calc(100vh - 4rem);
+  position: relative;
+
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-image: url(${ContactImage});
+  background-repeat: no-repeat;
+  background-position: center;
 
   padding: 2rem 0;
 
@@ -34,9 +41,7 @@ export const Email = styled.div`
 
 export const H3 = styled.h3`
   font-family: 'Alkatra';
-  font-size: 1.25rem;
-
-  border-bottom: 2px solid rgb(204, 204, 204);
+  font-size: 1.5rem;
 `;
 
 /* Email */
@@ -60,7 +65,7 @@ export const Input = styled.input`
 
 export const TextArea = styled.textarea`
   width: 30rem;
-  height: 10rem;
+  height: 15rem;
 
   padding: 0.5rem;
 

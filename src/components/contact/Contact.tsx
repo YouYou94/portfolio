@@ -26,9 +26,9 @@ export const Contact = () => {
         </S.Box>
         <S.Form ref={form} onSubmit={handleSubmitSendMessage}>
           <S.Input name="from_email" placeholder="email@google.com" />
-          <S.Input name="user_name" placeholder="your name" />
+          <S.Input name="user_name" placeholder="name" />
           <S.Input name="phone" placeholder="010-xxxx-xxxx" />
-          <S.TextArea name="message" placeholder="Your Message..." />
+          <S.TextArea name="message" placeholder="Message" />
           <S.Button>Send Message</S.Button>
         </S.Form>
       </S.Email>
