@@ -38,7 +38,7 @@ const TechBedge = styled.div<{ mode: string }>`
   padding: 0 1rem;
 
   font-family: 'Alkatra';
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 
   border: 1px solid
     ${(prop) => (prop.mode === 'true' ? '' : 'rgb(66, 90, 115)')};

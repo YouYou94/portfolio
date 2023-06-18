@@ -48,6 +48,8 @@ export const Linked = () => {
 };
 
 const LinkBox = styled.div<{ mode: string }>`
+  flex: 1;
+
   display: flex;
   flex-wrap: wrap;
 
