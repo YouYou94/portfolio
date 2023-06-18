@@ -35,6 +35,10 @@ const Box = styled.section`
 
 const CoverImg = styled.img`
   width: 25rem;
+
+  @media screen and (max-width: 768px) {
+    width: 17.5rem;
+  }
 `;
 
 const TitleBox = styled.div`

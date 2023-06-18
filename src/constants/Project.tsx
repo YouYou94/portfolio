@@ -39,7 +39,7 @@ export const ProjectList = [
     subtitle: '불렛저널로그',
     role: '개인프로젝트',
     about:
-      '다이어리를 쓰는 방법의 한 종류로, ‘Bullet’ 이라는 정보의 중요성이나 종류를 표시할 때 쓰는 기호를 사용하여 저널을 작성하는 불렛 저널을 웹에서 이용할 수 있도록 만든 웹페이지입니다. ',
+      '‘Bullet’ 이라는 정보의 중요성이나 종류를 표시할 때 쓰는 기호를 사용하여 저널을 작성하는 불렛저널 웹페이지입니다. ',
     link: {
       github: 'https://github.com/YouYou94/bujolog',
       demo: 'https://youyou94.github.io/bujolog/',

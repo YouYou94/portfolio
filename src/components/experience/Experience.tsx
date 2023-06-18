@@ -50,8 +50,6 @@ const ProjectBox = styled.div`
   gap: 1rem;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
-
-    grid-template-columns: 1fr 1fr;
+    width: 30rem;
   }
 `;
