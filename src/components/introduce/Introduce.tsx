@@ -7,23 +7,26 @@ import { Tech } from './tech/Tech';
 export const Introduce = () => {
   return (
     <S.Layout>
-      <S.Picture>
-        <S.IntroduceImg src={IntroduceImage} alt="작가 storyset 출처 Freepik" />
-      </S.Picture>
-      <S.Introduce>
-        <S.Box>
+      <S.IntroduceBox>
+        <S.ProfileBox>
+          <S.IntroduceImg
+            src={IntroduceImage}
+            alt="작가 storyset 출처 Freepik"
+          />
+          <S.Box>
+            <S.H3>Link</S.H3>
+            <Linked />
+          </S.Box>
+        </S.ProfileBox>
+        <S.AboutBox>
           <S.H3>About</S.H3>
-        </S.Box>
-        <About />
-        <S.Box>
-          <S.H3>Link & Contact</S.H3>
-        </S.Box>
-        <Linked />
-        <S.Box>
+          <About />
+        </S.AboutBox>
+        <S.TechBox>
           <S.H3>Tech</S.H3>
-        </S.Box>
-        <Tech />
-      </S.Introduce>
+          <Tech />
+        </S.TechBox>
+      </S.IntroduceBox>
     </S.Layout>
   );
 };

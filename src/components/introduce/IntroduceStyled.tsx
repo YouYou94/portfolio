@@ -15,26 +15,41 @@ export const Layout = styled.section`
 `;
 
 export const Box = styled.div`
+  width: 100%;
+
   display: flex;
+  flex-direction: column;
 `;
 
-export const Picture = styled.div`
+export const IntroduceBox = styled.div`
+  width: 48rem;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
-  @media screen and (min-width: 1025px) {
-    flex: 1;
+  padding: 1rem;
 
-    padding: 0 3rem;
-  }
+  gap: 1rem;
 
   @media screen and (max-width: 1024px) {
-    display: none;
+    width: 48rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 30rem;
   }
 `;
 
-export const Introduce = styled.div`
+export const ProfileBox = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const AboutBox = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -42,30 +57,24 @@ export const Introduce = styled.div`
   font-size: 1.125rem;
 
   gap: 1rem;
+`;
 
-  @media screen and (min-width: 1025px) {
-    flex: 1;
+export const TechBox = styled.div`
+  display: flex;
+  flex-direction: column;
 
-    padding: 0 3rem;
-  }
+  font-family: 'GowunDodum';
+  font-size: 1.125rem;
 
-  @media screen and (max-width: 1024px) {
-    width: 48rem;
-
-    padding: 0 1rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 30rem;
-
-    padding: 0 0.5rem;
-
-    font-size: 1rem;
-  }
+  gap: 1rem;
 `;
 
 export const IntroduceImg = styled.img`
-  width: 25rem;
+  width: 20rem;
+
+  @media screen and (max-width: 768px) {
+    width: 10rem;
+  }
 `;
 
 export const H3 = styled.h3`
