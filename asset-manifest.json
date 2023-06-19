@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.4cc32712.css",
-    "main.js": "/portfolio/static/js/main.9ec9995a.js",
+    "main.js": "/portfolio/static/js/main.b67d08a9.js",
     "static/media/GowunDodum-Regular.ttf": "/portfolio/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/orderapp.png": "/portfolio/static/media/orderapp.ceba91961108fbdf6224.png",
     "static/media/Alkatra-Regular.ttf": "/portfolio/static/media/Alkatra-Regular.23ab70245e38b361521f.ttf",
@@ -13,13 +13,13 @@
     "static/media/portfolio.png": "/portfolio/static/media/portfolio.c3b471515f3935005fa8.png",
     "static/media/introduce.png": "/portfolio/static/media/introduce.82438ef4553f36f83cb4.png",
     "static/media/LilitaOne-Regular.ttf": "/portfolio/static/media/LilitaOne-Regular.6f506507b06161b73e85.ttf",
-    "static/media/memoapp.png": "/portfolio/static/media/memoapp.8bb013ccb1d6ba78a5ad.png",
+    "static/media/memoapp.png": "/portfolio/static/media/memoapp.ee3b64a181abcf658e97.png",
     "index.html": "/portfolio/index.html",
     "main.4cc32712.css.map": "/portfolio/static/css/main.4cc32712.css.map",
-    "main.9ec9995a.js.map": "/portfolio/static/js/main.9ec9995a.js.map"
+    "main.b67d08a9.js.map": "/portfolio/static/js/main.b67d08a9.js.map"
   },
   "entrypoints": [
     "static/css/main.4cc32712.css",
-    "static/js/main.9ec9995a.js"
+    "static/js/main.b67d08a9.js"
   ]
 }
