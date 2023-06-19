@@ -20,49 +20,45 @@ const Main = () => {
 
       const deltaY = event.deltaY;
       const clientHeight = pageRef.current?.clientHeight || 0;
-      const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
 
       /* 스크롤 === 세로길이 */
-      const scrollTop = Math.max(
-        document.documentElement.scrollTop,
-        document.body.scrollTop,
-      );
+      const scrollTop = document.documentElement.scrollTop;
 
       const handleScrollTo = (count: number) => {
         window.scrollTo({
-          top: pageHeight * count,
+          top: (clientHeight / 4) * count,
           behavior: 'smooth',
         });
       };
 
       if (deltaY > 0) {
-        if (scrollTop >= 0 && scrollTop < clientHeight / 4) {
+        if (scrollTop >= 0 && scrollTop + 1 < clientHeight / 4) {
           handleScrollTo(1);
         } else if (
-          scrollTop >= clientHeight / 4 &&
-          scrollTop < (clientHeight / 4) * 2
+          scrollTop + 1 >= clientHeight / 4 &&
+          scrollTop + 1 < (clientHeight / 4) * 2
         ) {
           handleScrollTo(2);
         } else if (
-          scrollTop >= (clientHeight / 4) * 2 &&
+          scrollTop + 1 >= (clientHeight / 4) * 2 &&
           scrollTop < (clientHeight / 4) * 3
         ) {
           handleScrollTo(3);
         }
       } else if (deltaY < 0) {
         if (
-          scrollTop >= clientHeight / 4 &&
-          scrollTop < (clientHeight / 4) * 2
+          scrollTop + 1 >= clientHeight / 4 &&
+          scrollTop + 1 < (clientHeight / 4) * 2
         ) {
           handleScrollTo(0);
         } else if (
-          scrollTop >= (clientHeight / 4) * 2 &&
-          scrollTop < (clientHeight / 4) * 3
+          scrollTop + 1 >= (clientHeight / 4) * 2 &&
+          scrollTop + 1 < (clientHeight / 4) * 3
         ) {
           handleScrollTo(1);
         } else if (
-          scrollTop >= (clientHeight / 4) * 3 &&
-          scrollTop < (clientHeight / 4) * 4
+          scrollTop + 1 >= (clientHeight / 4) * 3 &&
+          scrollTop + 1 < (clientHeight / 4) * 4
         ) {
           handleScrollTo(2);
         }
