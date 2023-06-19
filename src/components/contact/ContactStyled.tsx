@@ -8,15 +8,21 @@ export const Layout = styled.section`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 
   background-image: url(${ContactImage});
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 
-  padding: 2rem 0;
+  padding: 2rem 10rem;
 
   gap: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    align-items: center;
+
+    padding: 2rem 0rem;
+  }
 `;
 
 export const Box = styled.div`
