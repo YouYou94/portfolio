@@ -22,6 +22,8 @@ export const Layout = styled.section`
     align-items: center;
 
     padding: 2rem 0rem;
+
+    background-position: center;
   }
 `;
 
