@@ -22,3 +22,13 @@
 ## UI
 
 <img src='src/assets/project/portfolio.png' alt="시작 화면">
+
+</br>
+
+### 저작권 표시
+
+- Cover 사진 : <a href="https://kr.freepik.com/free-vector/programming-concept-illustration_7118756.htm#query=frontend&position=23&from_view=keyword&track=sph#position=23&query=frontend">작가 storyset</a> 출처 Freepik
+
+- About 사진 : <a href="https://kr.freepik.com/free-vector/developer-activity-concept-illustration_9319773.htm#query=developer&position=13&from_view=author">작가 storyset</a> 출처 Freepik
+
+- Contact 사진 : <a href="https://kr.freepik.com/free-vector/thank-you-concept-illustration_34680607.htm#query=thanks&position=0&from_view=author">작가 storyset</a> 출처 Freepik
