@@ -1,10 +1,10 @@
 /* Common */
 export { CommonHeader } from './common/CommonHeader';
-export { Template } from './common/Template';
-export { FullTemplate } from './common/Template';
 export { Header } from './common/header/index';
 
 /* Components */
+export { Intro } from './intro/Intro';
+
 export { Introduce } from './introduce/Introduce';
 export { Experience } from './experience/Experience';
 export { Contact } from './contact/Contact';
