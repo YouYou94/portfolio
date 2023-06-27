@@ -22,3 +22,8 @@
   font-family: 'LilitaOne';
   src: url('./font/LilitaOne-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'malgun';
+  src: url('./font/malgun.ttf') format('truetype');
+}
