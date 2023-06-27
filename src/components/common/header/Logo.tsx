@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <TitleBox>
       <BsCodeSlash />
-      <Title>YouYou94</Title>
+      <Title>YouYou94 PORTFOLIO</Title>
       <SubTitle>Frontend Developer</SubTitle>
     </TitleBox>
   );
@@ -16,6 +16,8 @@ const TitleBox = styled.div`
 
   display: flex;
   align-items: center;
+
+  padding: 0 4rem;
 
   gap: 0.75rem;
 `;

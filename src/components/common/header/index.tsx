@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 import { Logo } from './Logo';
-import { Nav } from './Nav';
+import { Menu } from './Menu';
 
 export const Header = () => {
   return (
     <Layout>
       <Logo />
-      <Nav />
+      <Menu />
     </Layout>
   );
 };
 
 const Layout = styled.header`
-  position: fixed;
+  position: relative;
 
-  width: 100%;
-  height: 4rem;
+  height: 15rem;
 
   display: flex;
   justify-content: space-between;
 
-  padding: 0 3rem;
+  margin: 0 10rem;
+  padding-top: 10rem;
 `;
