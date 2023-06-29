@@ -9,21 +9,11 @@ export const ModeChanger = () => {
   const handleClickMode = () => setIsMode(!isMode);
 
   return (
-    <Layout>
-      <Box onClick={handleClickMode}>
-        {isMode ? <CiDark size={36} /> : <CiSun size={36} />}
-      </Box>
+    <Layout onClick={handleClickMode}>
+      {isMode ? <CiDark size={28} /> : <CiSun size={28} />}
     </Layout>
   );
 };
-
-const Layout = styled.div`
-  width: 6rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 const FadeIn = keyframes`
   0% {
@@ -34,9 +24,9 @@ const FadeIn = keyframes`
   }
 `;
 
-const Box = styled.div`
-  width: 4rem;
-  height: 4rem;
+const Layout = styled.div`
+  width: 3rem;
+  height: 3rem;
 
   display: flex;
   justify-content: center;
@@ -49,6 +39,6 @@ const Box = styled.div`
   }
 
   &:hover {
-    background-color: rgb(204, 204, 204, 0.1);
+    background-color: rgb(204, 204, 204, 0.25);
   }
 `;

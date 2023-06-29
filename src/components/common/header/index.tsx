@@ -21,13 +21,16 @@ const Layout = styled.header<{ mode: string }>`
   position: fixed;
 
   width: 100%;
-  height: 8rem;
+  height: 3rem;
 
   display: flex;
   justify-content: space-between;
 
-  margin: 0 3rem;
-  padding: 0 5rem;
+  border-bottom: 1px solid rgb(204, 204, 204, 0.5);
+  padding: 0 3rem;
+
+  background-color: ${(prop) =>
+    prop.mode === 'true' ? 'rgb(34, 40, 49)' : ''};
 
   color: ${(prop) =>
     prop.mode === 'true' ? 'rgb(255, 255, 255)' : 'rgb(34, 40, 49)'};

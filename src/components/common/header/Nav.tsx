@@ -5,6 +5,7 @@ export const Nav = () => {
     <Layout>
       <List>
         <Item>HOME</Item>
+        <Item>RESUME</Item>
         <Item>PROJECT</Item>
         <Item>CONTACT</Item>
       </List>
@@ -22,17 +23,44 @@ const List = styled.ul`
   flex: 1;
 
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  padding: 0 2rem;
+  justify-content: center;
 
   gap: 3rem;
 `;
 
 const Item = styled.li`
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
   font-family: 'Anton';
-  font-size: 1.5rem;
 
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+
+    content: '';
+
+    bottom: 0;
+
+    width: 0;
+    height: 1rem;
+
+    border-bottom: 2px solid rgb(66, 90, 115);
+
+    opacity: 0;
+
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    color: rgb(66, 90, 115);
+  }
+
+  &:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
 `;

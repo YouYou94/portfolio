@@ -3,23 +3,24 @@ import { BsCodeSlash } from 'react-icons/bs';
 
 export const Logo = () => {
   return (
-    <TitleBox>
+    <Layout>
       <BsCodeSlash />
-      <Title>YouYou94 PORTFOLIO</Title>
+      <Title>PORTFOLIO</Title>
       <SubTitle>Frontend Developer</SubTitle>
-    </TitleBox>
+    </Layout>
   );
 };
 
-const TitleBox = styled.div`
-  flex: 1;
+const Layout = styled.div`
+  height: 3rem;
 
   display: flex;
+  justify-content: center;
   align-items: center;
 
-  padding: 0 4rem;
+  user-select: none;
 
-  gap: 0.75rem;
+  gap: 0.5rem;
 `;
 
 const Title = styled.h2`
@@ -31,6 +32,4 @@ const Title = styled.h2`
 const SubTitle = styled.span`
   font-family: 'Alkatra';
   font-size: 0.75rem;
-
-  user-select: none;
 `;
