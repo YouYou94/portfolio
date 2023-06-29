@@ -19,6 +19,7 @@ const Layout = styled.main<{ mode: string }>`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   background-color: ${(prop) =>
     prop.mode === 'true' ? 'rgb(34, 40, 49)' : ''};

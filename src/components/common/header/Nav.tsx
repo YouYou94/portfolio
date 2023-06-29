@@ -23,7 +23,9 @@ const List = styled.ul`
   flex: 1;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+
+  padding: 0 3rem;
 
   gap: 3rem;
 `;

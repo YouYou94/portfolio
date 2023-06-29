@@ -30,7 +30,7 @@ const Layout = styled.header<{ mode: string }>`
   padding: 0 3rem;
 
   background-color: ${(prop) =>
-    prop.mode === 'true' ? 'rgb(34, 40, 49)' : ''};
+    prop.mode === 'true' ? 'rgb(34, 40, 49)' : 'rgb(255, 255, 255)'};
 
   color: ${(prop) =>
     prop.mode === 'true' ? 'rgb(255, 255, 255)' : 'rgb(34, 40, 49)'};
