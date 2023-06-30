@@ -22,7 +22,7 @@ const Layout = styled.section`
   flex-direction: column;
 
   padding-top: 10rem;
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
 
   gap: 3rem;
 `;
