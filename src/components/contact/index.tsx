@@ -8,7 +8,7 @@ export const Contact = () => {
       <TitleBox>
         <Title>
           <PiPaperPlaneTiltDuotone size={36} />
-          Contact
+          필요한 경우 저에게 메시지를 보낼 수 있습니다.
         </Title>
       </TitleBox>
       <Line />
