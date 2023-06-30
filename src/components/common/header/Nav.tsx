@@ -1,13 +1,26 @@
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const Nav = () => {
   return (
     <Layout>
       <List>
-        <Item>HOME</Item>
+        <Item>
+          <Link to="intro" spy={true} smooth={true}>
+            HOME
+          </Link>
+        </Item>
         <Item>RESUME</Item>
-        <Item>PROJECT</Item>
-        <Item>CONTACT</Item>
+        <Item>
+          <Link to="project" spy={true} smooth={true}>
+            PROJECT
+          </Link>
+        </Item>
+        <Item>
+          <Link to="contact" spy={true} smooth={true}>
+            CONTACT
+          </Link>
+        </Item>
       </List>
     </Layout>
   );

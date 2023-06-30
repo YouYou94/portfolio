@@ -5,7 +5,7 @@ import { Project } from './Project';
 
 export const Experience = () => {
   return (
-    <Layout>
+    <Layout id="project">
       <TitleBox>
         <Title>
           <PiFolderOpenDuotone size={32} />

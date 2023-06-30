@@ -4,7 +4,7 @@ import { MessengerForm } from './MessengerForm';
 
 export const Contact = () => {
   return (
-    <Layout>
+    <Layout id="contact">
       <TitleBox>
         <Title>
           <PiPaperPlaneTiltDuotone size={36} />

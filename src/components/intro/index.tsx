@@ -6,7 +6,7 @@ import { Tech } from './Tech';
 
 export const Intro = () => {
   return (
-    <Layout>
+    <Layout id="intro">
       <Cover />
       <About />
       <Link />
