@@ -71,4 +71,9 @@ const TopBtnBox = styled.div<{ scroll: number }>`
   cursor: pointer;
 
   ${(prop) => (prop.scroll > 100 ? '' : 'display: none')};
+
+  @media screen and (max-width: 1024px) {
+    width: 3rem;
+    height: 3rem;
+  }
 `;

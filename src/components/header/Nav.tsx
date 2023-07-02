@@ -10,7 +10,6 @@ export const Nav = () => {
             HOME
           </Link>
         </Item>
-        <Item>RESUME</Item>
         <Item>
           <Link to="project" spy={true} smooth={true}>
             PROJECT
@@ -21,6 +20,7 @@ export const Nav = () => {
             CONTACT
           </Link>
         </Item>
+        <Item>RESUME</Item>
       </List>
     </Layout>
   );
@@ -30,6 +30,10 @@ const Layout = styled.nav`
   flex: 1;
 
   display: flex;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const List = styled.ul`
