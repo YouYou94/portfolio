@@ -21,8 +21,7 @@ const Layout = styled.section`
   display: flex;
   flex-direction: column;
 
-  padding-top: 10rem;
-  padding-bottom: 8rem;
+  padding: 10rem 2rem 8rem;
 
   gap: 3rem;
 `;

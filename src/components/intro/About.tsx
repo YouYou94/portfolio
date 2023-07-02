@@ -26,8 +26,6 @@ export const About = () => {
 
 const Layout = styled.div`
   display: flex;
-
-  padding: 0 2rem;
 `;
 
 const AboutBox = styled.div`
