@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useRecoilValue } from 'recoil';
-import { getMode } from '../../../recoil';
+import { getMode } from '../../recoil';
 import { FaGithub, FaBloggerB } from 'react-icons/fa6';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { PiPlugsConnectedBold } from 'react-icons/pi';

@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 import { Nav } from './Nav';
 import { ModeChanger } from './ModeChanger';
 import { useRecoilValue } from 'recoil';
-import { getMode } from '../../../recoil';
+import { getMode } from '../../recoil';
 
 export const Header = () => {
   const mode = useRecoilValue(getMode);

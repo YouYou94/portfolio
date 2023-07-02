@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { CiSun, CiDark } from 'react-icons/ci';
 import { useRecoilState } from 'recoil';
-import { mode } from '../../../recoil';
+import { mode } from '../../recoil';
 
 export const ModeChanger = () => {
   const [isMode, setIsMode] = useRecoilState<boolean>(mode);

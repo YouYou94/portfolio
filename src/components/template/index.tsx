@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ReactElement } from 'react';
 import { useRecoilValue } from 'recoil';
-import { getMode } from '../../../recoil';
+import { getMode } from '../../recoil';
 
 interface TemplateProps {
   children: string | ReactElement | ReactElement[];
