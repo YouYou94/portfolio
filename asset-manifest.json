@@ -1,25 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4cc32712.css",
-    "main.js": "/portfolio/static/js/main.5d90c7ba.js",
+    "main.css": "/portfolio/static/css/main.69409562.css",
+    "main.js": "/portfolio/static/js/main.34125b90.js",
     "static/media/GowunDodum-Regular.ttf": "/portfolio/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/orderapp.png": "/portfolio/static/media/orderapp.ceba91961108fbdf6224.png",
     "static/media/Alkatra-Regular.ttf": "/portfolio/static/media/Alkatra-Regular.23ab70245e38b361521f.ttf",
-    "static/media/contact.png": "/portfolio/static/media/contact.fb995fef114602e38925.png",
     "static/media/bujologapp.png": "/portfolio/static/media/bujologapp.994be590faff3035db27.png",
-    "static/media/Caveat-Regular.ttf": "/portfolio/static/media/Caveat-Regular.a1e626469343821ea869.ttf",
     "static/media/Anton-Regular.ttf": "/portfolio/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
     "static/media/cover.png": "/portfolio/static/media/cover.2ae73e6026b3bc86b38d.png",
     "static/media/portfolio.png": "/portfolio/static/media/portfolio.c3b471515f3935005fa8.png",
-    "static/media/introduce.png": "/portfolio/static/media/introduce.82438ef4553f36f83cb4.png",
-    "static/media/LilitaOne-Regular.ttf": "/portfolio/static/media/LilitaOne-Regular.6f506507b06161b73e85.ttf",
     "static/media/memoapp.png": "/portfolio/static/media/memoapp.ee3b64a181abcf658e97.png",
     "index.html": "/portfolio/index.html",
-    "main.4cc32712.css.map": "/portfolio/static/css/main.4cc32712.css.map",
-    "main.5d90c7ba.js.map": "/portfolio/static/js/main.5d90c7ba.js.map"
+    "main.69409562.css.map": "/portfolio/static/css/main.69409562.css.map",
+    "main.34125b90.js.map": "/portfolio/static/js/main.34125b90.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cc32712.css",
-    "static/js/main.5d90c7ba.js"
+    "static/css/main.69409562.css",
+    "static/js/main.34125b90.js"
   ]
 }
