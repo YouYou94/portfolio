@@ -4,6 +4,7 @@ import { Nav } from './Nav';
 import { ModeChanger } from './ModeChanger';
 import { useRecoilValue } from 'recoil';
 import { getMode } from '../../recoil';
+import { ResponsiveNav } from './ResponsiveNav';
 
 export const Header = () => {
   const mode = useRecoilValue(getMode);
@@ -12,6 +13,7 @@ export const Header = () => {
     <Layout mode={mode.toString()}>
       <Logo />
       <Nav />
+      <ResponsiveNav />
       <ModeChanger />
     </Layout>
   );
