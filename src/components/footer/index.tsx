@@ -68,10 +68,14 @@ const Layout = styled.footer<{ mode: string }>`
   align-items: center;
 
   border-top: 1px solid rgb(204, 204, 204, 0.5);
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 4rem 2rem;
 
   background-color: ${(prop) =>
     prop.mode === 'true' ? 'transparent' : 'rgb(204, 204, 204, 0.25)'};
+
+  @media screen and (max-width: 1024px) {
+    padding: 4rem 1rem 2rem;
+  }
 `;
 
 const Box = styled.div`

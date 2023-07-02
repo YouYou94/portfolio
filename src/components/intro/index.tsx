@@ -24,4 +24,10 @@ const Layout = styled.section`
   padding: 10rem 2rem 8rem;
 
   gap: 3rem;
+
+  @media screen and (max-width: 1024px) {
+    width: 36rem;
+
+    padding: 10rem 1rem 8rem;
+  }
 `;

@@ -38,9 +38,15 @@ const Layout = styled.section`
   display: flex;
   flex-direction: column;
 
-  padding: 0 2rem 5rem 2rem;
+  padding: 0 2rem 5rem;
 
   gap: 0.5rem;
+
+  @media screen and (max-width: 1024px) {
+    width: 36rem;
+
+    padding: 0 1rem 5rem;
+  }
 `;
 
 const Line = styled.div`
