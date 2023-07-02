@@ -53,7 +53,14 @@ export const ResponsiveNav = () => {
               CONTACT
             </Link>
           </Item>
-          <Item>RESUME</Item>
+          <Item>
+            <Anchor
+              href="https://www.notion.so/kukuwhy/_-645e2f54a5e6439696d185d8c4b860c8?pvs=4"
+              target="_blank"
+            >
+              RESUME
+            </Anchor>
+          </Item>
         </List>
       </Menu>
     </Layout>
@@ -138,5 +145,17 @@ const Item = styled.li`
 
   &:hover {
     background-color: rgb(204, 204, 204, 0.25);
+  }
+`;
+
+const Anchor = styled.a`
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:visited {
+    color: inherit;
   }
 `;
