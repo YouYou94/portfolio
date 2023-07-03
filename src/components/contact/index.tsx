@@ -8,7 +8,7 @@ export const Contact = () => {
       <TitleBox>
         <Title>
           <PiPaperPlaneTiltDuotone size={36} />
-          필요한 경우 저에게 메시지를 보낼 수 있습니다.
+          Send Your Message
         </Title>
       </TitleBox>
       <Line />
@@ -31,6 +31,12 @@ const Layout = styled.section`
     width: 36rem;
 
     padding: 0 1rem 8rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    padding: 0rem 0.5rem 8rem;
   }
 `;
 
