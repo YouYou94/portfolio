@@ -30,4 +30,10 @@ const Layout = styled.section`
 
     padding: 10rem 1rem 8rem;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    padding: 10rem 0.5rem 8rem;
+  }
 `;

@@ -42,6 +42,10 @@ const AboutText = styled.span`
   font-family: 'GowunDodum';
 
   white-space: pre-wrap;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 `;
 
 const Strong = styled.strong`

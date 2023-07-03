@@ -109,6 +109,13 @@ const TechList = styled.ul`
 const TechItem = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.25rem;
+  }
 `;
 
 const TechTitle = styled.span`
@@ -121,6 +128,7 @@ const TechBedgeBox = styled.div`
   flex: 2;
 
   display: flex;
+  flex-wrap: wrap;
 
   gap: 0.5rem;
 `;
