@@ -47,6 +47,12 @@ const Layout = styled.section`
 
     padding: 0 1rem 5rem;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    padding: 0rem 0.5rem 8rem;
+  }
 `;
 
 const Line = styled.div`
