@@ -36,4 +36,8 @@ const Layout = styled.header<{ mode: string }>`
 
   color: ${(prop) =>
     prop.mode === 'true' ? 'rgb(255, 255, 255)' : 'rgb(34, 40, 49)'};
+
+  @media screen and (max-width: 768px) {
+    padding: 0 0.5rem;
+  }
 `;
