@@ -2,7 +2,8 @@
 
 `Typescript` + `React` + `Recoil` + `Styled-Components`를 이용하여 만든 포트폴리오입니다. 현재까지 사용했던 기술을 적용하고, 기능을 구현해보며 복습할 수 있었던 경험이 되었습니다.
 
-※ **반응형 웹(1024px/768px/480px 기준)** 구현
+※ **반응형 웹(1024px/768px/480px 기준)** 구현<br/>
+※ **23.07.04.** UI 변경
 
 <br/>
 <br/>
@@ -27,8 +28,4 @@
 
 ### 저작권 표시
 
-- Cover 사진 : <a href="https://kr.freepik.com/free-vector/programming-concept-illustration_7118756.htm#query=frontend&position=23&from_view=keyword&track=sph#position=23&query=frontend">작가 storyset</a> 출처 Freepik
-
-- About 사진 : <a href="https://kr.freepik.com/free-vector/developer-activity-concept-illustration_9319773.htm#query=developer&position=13&from_view=author">작가 storyset</a> 출처 Freepik
-
-- Contact 사진 : <a href="https://kr.freepik.com/free-vector/thank-you-concept-illustration_34680607.htm#query=thanks&position=0&from_view=author">작가 storyset</a> 출처 Freepik
+- Intro 사진 : <a href="https://kr.freepik.com/free-vector/programming-concept-illustration_7118756.htm#query=frontend&position=23&from_view=keyword&track=sph#position=23&query=frontend">작가 storyset</a> 출처 Freepik
