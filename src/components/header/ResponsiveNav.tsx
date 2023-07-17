@@ -155,6 +155,10 @@ const Anchor = styled.a`
   justify-content: center;
   align-items: center;
 
+  &:link {
+    color: inherit;
+  }
+
   &:visited {
     color: inherit;
   }
