@@ -188,6 +188,10 @@ const Button = styled.button`
 `;
 
 const Anchor = styled.a`
+  &:link {
+    color: inherit;
+  }
+
   &:visited {
     color: inherit;
   }
