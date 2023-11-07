@@ -11,12 +11,12 @@ export const ProjectList = [
     subtitle: '유병현 포트폴리오',
     role: '개인프로젝트',
     about:
-      'Typescript + React + Recoil 이용하여 만든 포트폴리오입니다. 현재까지 사용했던 기술을 적용하고, 기능을 구현해보며 복습할 수 있었던 경험이 되었습니다.',
+      'TypeScript + React + Recoil 이용하여 만든 포트폴리오입니다. 현재까지 사용했던 기술을 적용하고, 기능을 구현해보며 복습할 수 있었던 경험이 되었습니다.',
     link: {
       github: 'https://github.com/YouYou94/portfolio',
       demo: 'http://YouYou94.github.io/portfolio/',
     },
-    techstack: 'Typescript | React | Recoil | Styled-Components',
+    techstack: 'TypeScript | React | Recoil | Styled-Components',
   },
   {
     id: 1,
@@ -30,7 +30,7 @@ export const ProjectList = [
       github: 'https://github.com/YouYou94/new-tap',
       demo: 'http://YouYou94.github.io/off-line-memo-app',
     },
-    techstack: 'Typescript | React | Recoil | Styled-Components',
+    techstack: 'TypeScript | React | Recoil | Styled-Components',
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const ProjectList = [
       demo: 'https://youyou94.github.io/bujolog/',
     },
     techstack:
-      'Javascript | React | Redux-Toolkit | Styled-Components | Firebase',
+      'JavaScript | React | Redux-Toolkit | Styled-Components | FireBase',
   },
   {
     id: 3,
@@ -59,6 +59,6 @@ export const ProjectList = [
       github: 'https://github.com/YouYou94/order-app',
       demo: 'https://youyou94.github.io/order-app/',
     },
-    techstack: 'Javascript | React | Context | Styled-Components',
+    techstack: 'JavaScript | React | Context | Styled-Components',
   },
 ];

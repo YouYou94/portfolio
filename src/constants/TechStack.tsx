@@ -1,4 +1,4 @@
-export const Language = ['Javascript', 'Typescript'];
+export const Language = ['JavaScript', 'TypeScript'];
 export const Framework_Library = [
   'React',
   'Recoil',
