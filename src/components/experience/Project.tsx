@@ -10,6 +10,7 @@ import { getMode } from '../../recoil';
 interface LinkType {
   github: string;
   demo: string;
+  detail: string;
 }
 
 interface ProjectProps {
@@ -20,6 +21,7 @@ interface ProjectProps {
   about: string;
   techstack: string;
   link: LinkType;
+  handleOnClick: (url: string) => void;
 }
 
 export const Project = ({
@@ -30,6 +32,7 @@ export const Project = ({
   about,
   techstack,
   link,
+  handleOnClick,
 }: ProjectProps) => {
   const mode = useRecoilValue(getMode);
 
@@ -71,6 +74,7 @@ export const Project = ({
             사이트
           </Anchor>
         </Button>
+        <Button onClick={() => handleOnClick(link.detail)}>상세보기</Button>
       </ButtonBox>
     </Layout>
   );

@@ -2,8 +2,15 @@ import styled from 'styled-components';
 import { PiFolderOpenDuotone } from 'react-icons/pi';
 import { ProjectList } from '../../constants';
 import { Project } from './Project';
+import { useNavigate } from 'react-router-dom';
 
 export const Experience = () => {
+  const navigate = useNavigate();
+
+  const handleOnClickDetailProject = (detailURL: string) => {
+    navigate(`/portfolio/project/${detailURL}`);
+  };
+
   return (
     <Layout id="project">
       <TitleBox>
@@ -15,6 +22,7 @@ export const Experience = () => {
       <Line />
       {ProjectList?.map((project: any, index: number) => {
         const { title, subtitle, role, ui, about, techstack, link } = project;
+
         return (
           <Project
             key={index}
@@ -25,6 +33,7 @@ export const Experience = () => {
             about={about}
             techstack={techstack}
             link={link}
+            handleOnClick={handleOnClickDetailProject}
           />
         );
       })}
