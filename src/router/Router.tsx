@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Portfolio } from '../pages';
+import { Portfolio, Details } from '../pages';
 import { Header } from '../components';
 
 export const Router = () => {
@@ -8,6 +8,7 @@ export const Router = () => {
       <Header />
       <Routes>
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/project/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );
