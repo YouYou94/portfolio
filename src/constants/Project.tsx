@@ -15,7 +15,6 @@ export const ProjectList = [
     link: {
       github: 'https://github.com/YouYou94/portfolio',
       demo: 'http://YouYou94.github.io/portfolio/',
-      detail: 'portfolio',
     },
     techstack: 'TypeScript | React | Recoil | Styled-Components',
   },
@@ -30,7 +29,6 @@ export const ProjectList = [
     link: {
       github: 'https://github.com/YouYou94/new-tap',
       demo: 'http://YouYou94.github.io/off-line-memo-app',
-      detail: 'memoapp',
     },
     techstack: 'TypeScript | React | Recoil | Styled-Components',
   },
@@ -45,7 +43,6 @@ export const ProjectList = [
     link: {
       github: 'https://github.com/YouYou94/bujolog',
       demo: 'https://youyou94.github.io/bujolog/',
-      detail: 'bujolog',
     },
     techstack:
       'JavaScript | React | Redux-Toolkit | Styled-Components | FireBase',
@@ -61,7 +58,6 @@ export const ProjectList = [
     link: {
       github: 'https://github.com/YouYou94/order-app',
       demo: 'https://youyou94.github.io/order-app/',
-      detail: 'orderapp',
     },
     techstack: 'JavaScript | React | Context | Styled-Components',
   },
