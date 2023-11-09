@@ -1,7 +1,11 @@
-import { Template } from '../components';
+import { Detail, Template } from '../components';
 
 const Details = () => {
-  return <Template>z</Template>;
+  return (
+    <Template>
+      <Detail />
+    </Template>
+  );
 };
 
 export default Details;
