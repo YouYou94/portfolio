@@ -10,10 +10,10 @@ import { getMode } from '../../recoil';
 interface LinkType {
   github: string;
   demo: string;
-  detail: string;
 }
 
 interface ProjectProps {
+  id: number;
   title: string;
   subtitle: string;
   role: string;
@@ -21,10 +21,11 @@ interface ProjectProps {
   about: string;
   techstack: string;
   link: LinkType;
-  handleOnClick: (url: string) => void;
+  handleOnClick: (id: number) => void;
 }
 
 export const Project = ({
+  id,
   title,
   subtitle,
   role,
@@ -74,7 +75,7 @@ export const Project = ({
             사이트
           </Anchor>
         </Button>
-        <Button onClick={() => handleOnClick(link.detail)}>상세보기</Button>
+        <Button onClick={() => handleOnClick(id)}>상세보기</Button>
       </ButtonBox>
     </Layout>
   );

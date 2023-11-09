@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 export const Experience = () => {
   const navigate = useNavigate();
 
-  const handleOnClickDetailProject = (detailURL: string) => {
-    navigate(`/portfolio/project/${detailURL}`);
+  const handleOnClickDetailProject = (id: number) => {
+    navigate(`/portfolio/project/${id}`);
   };
 
   return (
@@ -21,10 +21,12 @@ export const Experience = () => {
       </TitleBox>
       <Line />
       {ProjectList?.map((project: any, index: number) => {
-        const { title, subtitle, role, ui, about, techstack, link } = project;
+        const { id, title, subtitle, role, ui, about, techstack, link } =
+          project;
 
         return (
           <Project
+            id={id}
             key={index}
             title={title}
             subtitle={subtitle}
