@@ -22,7 +22,7 @@ export const Nav = () => {
         </Item>
         <Item>
           <Anchor
-            href="https://www.notion.so/kukuwhy/_-645e2f54a5e6439696d185d8c4b860c8?pvs=4"
+            href="https://aromatic-condition-562.notion.site/_-6d61293378634d91b96e4039aba397c7?pvs=4"
             target="_blank"
           >
             RESUME

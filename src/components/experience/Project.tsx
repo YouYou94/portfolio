@@ -75,7 +75,7 @@ export const Project = ({
             사이트
           </Anchor>
         </Button>
-        <Button onClick={() => handleOnClick(id)}>상세보기</Button>
+        {/* <Button onClick={() => handleOnClick(id)}>상세보기</Button> */}
       </ButtonBox>
     </Layout>
   );
